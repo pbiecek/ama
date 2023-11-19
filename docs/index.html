@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Adversarial Model Analysis</title>
+  <meta name="description" content="Red Team Notes" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Adversarial Model Analysis" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/detective_cap.png" />
+  <meta property="og:description" content="Red Team Notes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Adversarial Model Analysis" />
+  
+  <meta name="twitter:description" content="Red Team Notes" />
+  <meta name="twitter:image" content="/images/detective_cap.png" />
+
+<meta name="author" content="Przemysław Biecek" />
+
+
+<meta name="date" content="2023-11-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="model-evaluation-levels.html"/>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><h3>Adversarial Model Analysis</h3> RedTeam Notes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="model-evaluation-levels.html"><a href="model-evaluation-levels.html"><i class="fa fa-check"></i><b>1</b> Model Evaluation Levels</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Adversarial Model Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Adversarial Model Analysis</h1>
+<p class="author"><em>Przemysław Biecek</em></p>
+<p class="date"><em>2023-11-19</em></p>
+</div>
+<div id="introduction" class="section level1 unnumbered hasAnchor">
+<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="images/detective_cap.png" width="700" style="display: block; margin: auto;" /></p>
+<p>The explosion of interest in machine learning coupled with the increasing availability of large amounts of data and tools for simple development of models has quickly led to an avalanche of examples of hurtful, unsafe or unfair decisions made by automated systems.</p>
+<p>The response to examples of decisions hurting citizens is a growing number of regulations. The AI act <span class="citation"><a href="#ref-AI-Act">[1]</a></span> discussed for several years in the European Union, President Biden’s recently issued Executive Order <span class="citation"><a href="#ref-Executive-Order">[2]</a></span> are just two examples of the growing number of recommendations reiterating over and over that safe models must be created.</p>
+<p>And with lines of companies eager to sell audits of AI systems (arguably more lucrative than financial audits), and a crowd of lawyers trying to embrace the nomenclature used in the emerging regulations on the table, an open question remains - what technical tools do we have available to develop secure AI systems.</p>
+<p>After all, it’s not that data scientists (the sexiest job of the 21st Century) are maliciously creating poorly performing models. Nor is it the case that data-collecting companies are maliciously sewing biases into the data. Nor is it that model-training tools bury unwanted artifacts in models.
+The truth is that for the past decades we have been focused on developing model building tools virtually ignoring the need for in-depth verification.</p>
+<p>In this book, you will find examples of techniques that can help to create safe models. However, developing safety of a model requires a completely new mind-set. Instead of chasing performance metrics by using the strangest tricks to bump up performance on the fifth significant digit this time, one must learn to look for weaknesses in models. Spot them and fix it and iterate until no weaknesses can be found.</p>
+<p>The area of model analysis is a new topic that will rapidly expand in the years to come. Certainly many techniques not described in this book are already or will be created. If you know such techniques then please contact me, I will try to <strong>add them to this living book</strong>.</p>
+<div id="acknowledgments" class="section level2 unnumbered hasAnchor">
+<h2>Acknowledgments<a href="index.html#acknowledgments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This book is a continuation of the <em>Explanatory Model Analysis</em> (EMA) book <span class="citation"><a href="#ref-biecek_burzykowski_2021">[3]</a></span>. In EMA, we showed how to apply XAI techniques to better understand how the model works. In this book, we show how to use the available techniques to find potentially problematic situations where the model is not working.</p>
+<p>Cover and chapter graphics created with <a href="https://www.midjourney.com/">MidJourney</a>.</p>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body">
+<div id="ref-AI-Act" class="csl-entry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">EUROPEAN COMMISSION, <em><span class="nocase">Proposal for a ’REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL’</span></em>. EUROPEAN COMMISSION, 2021. Available: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206</a></div>
+</div>
+<div id="ref-Executive-Order" class="csl-entry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Joe Biden, <em><span class="nocase">Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence</span></em>. President of USA, 2023. Available: <a href="https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/">https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/</a></div>
+</div>
+<div id="ref-biecek_burzykowski_2021" class="csl-entry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">P. Biecek and T. Burzykowski, <em><span>Explanatory Model Analysis</span></em>. Chapman; Hall/CRC, New York, 2021. Available: <a href="https://ema.drwhy.ai/">https://ema.drwhy.ai/</a></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="model-evaluation-levels.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/pbiecek/ama/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["book.pdf", "book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
