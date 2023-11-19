@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 MITRE ATT&amp;CK | Adversarial Model Analysis</title>
+  <meta name="description" content="Red Team Notes" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 MITRE ATT&amp;CK | Adversarial Model Analysis" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/detective_cap.png" />
+  <meta property="og:description" content="Red Team Notes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 MITRE ATT&amp;CK | Adversarial Model Analysis" />
+  
+  <meta name="twitter:description" content="Red Team Notes" />
+  <meta name="twitter:image" content="/images/detective_cap.png" />
+
+<meta name="author" content="Przemysław Biecek" />
+
+
+<meta name="date" content="2023-11-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="model-evaluation-levels.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><h3>Adversarial Model Analysis</h3> RedTeam Notes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="model-evaluation-levels.html"><a href="model-evaluation-levels.html"><i class="fa fa-check"></i><b>1</b> Model Evaluation Levels</a></li>
+<li class="chapter" data-level="2" data-path="mitre-attck.html"><a href="mitre-attck.html"><i class="fa fa-check"></i><b>2</b> MITRE ATT&amp;CK</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="mitre-attck.html"><a href="mitre-attck.html#tactics"><i class="fa fa-check"></i><b>2.1</b> Tactics</a></li>
+<li class="chapter" data-level="2.2" data-path="mitre-attck.html"><a href="mitre-attck.html#techniques"><i class="fa fa-check"></i><b>2.2</b> Techniques</a></li>
+<li class="chapter" data-level="2.3" data-path="mitre-attck.html"><a href="mitre-attck.html#procedures"><i class="fa fa-check"></i><b>2.3</b> Procedures</a></li>
+<li class="chapter" data-level="2.4" data-path="mitre-attck.html"><a href="mitre-attck.html#attck-for-ai-systems"><i class="fa fa-check"></i><b>2.4</b> ATT&amp;CK for AI systems</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Adversarial Model Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="mitre-attck" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> MITRE ATT&amp;CK<a href="mitre-attck.html#mitre-attck" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Inspirations for adversarial analysis of ML models can be borrowed from concepts proposed in cyber security. One such remarkable concept is the ATT&amp;CK matrix maintained by MITRE corporations.</p>
+<p>MITRE was formed in 1958 as a military think tank to advance national security. Now it is ,,applying systems thinking to national challenges in defense, cybersecurity, healthcare, homeland security, and transportation. Solving problems for a safer world’’ (a quote from their official profile). MITRE has a number of ambitious projects underway, perhaps the best known of which is the MITRE ATT&amp;CK framework <a href="https://attack.mitre.org/" class="uri">https://attack.mitre.org/</a>.</p>
+<p>The ATT&amp;CK framework <span class="citation"><a href="#ref-mitre-att">[6]</a></span> is a curated publicly available knowledge base of various cyber adversary tactics and techniques that can be used across the entire attack lifecycle. It takes the perspective of the adversary collecting and cataloging the various tactics, techniques, and procedures (TTPs) used in cyber intrusions, thereby offering defenders a detailed insight into potential attack methods and aiding in the development of more robust defense strategies.</p>
+<div class="float" id="fig:mitre">
+<img src="images/mitre_attack.png" alt="ATT&amp;CK Matrix for Enterprise, screenshot from https://attack.mitre.org/" />
+<div class="figcaption">ATT&amp;CK Matrix for Enterprise, screenshot from <a href="https://attack.mitre.org/" class="uri">https://attack.mitre.org/</a></div>
+</div>
+<p>First, let’s familiarise with the nomenclature used in ATT&amp;CK framework (Adversarial Tactics, Techniques, and Common Knowledge).</p>
+<div id="tactics" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Tactics<a href="mitre-attck.html#tactics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A <strong>tactic</strong> refers to a high-level objective or goal that an adversary aims to achieve during a cyber attack. It represents the overarching category of activities or actions employed by attackers to accomplish their malicious objectives within a network or system.</p>
+<p>There are 11 tactics defined within the ATT&amp;CK framework, each representing a distinct phase or goal in the cyber attack lifecycle (these are columns in the matrix presented in Figure <span class="citation"><a href="#ref-fig:mitre"><strong>fig:mitre?</strong></a></span>):</p>
+<ul>
+<li><strong>Initial Access:</strong> This tactic involves the methods an attacker uses to gain initial entry into a system or network environment.</li>
+<li><strong>Execution:</strong> Tactics related to techniques used to run malicious code or commands on a victim’s system.</li>
+<li><strong>Persistence:</strong> Techniques employed by attackers to maintain their foothold within a compromised system or network, ensuring continued access even after initial access has been achieved.</li>
+<li><strong>Privilege Escalation:</strong> Methods used to obtain higher levels of access or control within a system, moving from lower-privileged accounts to higher-privileged ones.</li>
+<li><strong>Defense Evasion:</strong> Tactics focused on techniques used by attackers to avoid detection or thwart defensive measures implemented by security solutions.</li>
+<li><strong>Credential Access:</strong> Techniques employed to obtain account credentials or authentication tokens, which can be used to gain unauthorized access to systems or resources.</li>
+<li><strong>Discovery:</strong> Tactics related to an attacker’s efforts to gather information about a target network or system, including identifying assets, users, and configurations.</li>
+<li><strong>Lateral Movement:</strong> Techniques used by attackers to move through a network, exploring and accessing different systems or resources beyond the initially compromised system.</li>
+<li><strong>Collection:</strong> Tactics involving the gathering or exfiltration of data or sensitive information from the compromised environment.</li>
+<li><strong>Exfiltration:</strong> Techniques used to transfer stolen data or information out of the victim’s network to an external location controlled by the attacker.</li>
+<li><strong>Impact:</strong> Tactics focused on actions that cause damage, disruption, or other negative effects on the target system or organization.</li>
+</ul>
+</div>
+<div id="techniques" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Techniques<a href="mitre-attck.html#techniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>While <strong>tactique</strong> address the question <em>Why</em> is the objective of the adversary action, the <em>What</em> question is addressed by <strong>techniques</strong>. More formally a technique refers to a specific method, approach, or procedure used by adversaries to accomplish a particular objective within a given tactic during a cyber attack.</p>
+<p>There is a (growing) number of techniques for each tactic. For example, the techniques listed under the “Collection” tactic represent specific methods or procedures used by attackers to gather or harvest data from targeted systems or networks during a cyber intrusion. These techniques help adversaries achieve their goal of acquiring sensitive information or valuable data from compromised environments. Some techniques listed for the tactic “Collection” include Audio Capture, Clipboard data, Screen Capture and Email collection.</p>
+<p>For each technique, the ATT&amp;CK matrix provides examples of procedures, mitigation strategies and detection techniques. See page <a href="https://attack.mitre.org/techniques/T1123/" class="uri">https://attack.mitre.org/techniques/T1123/</a> for an description for the Audio Capture technique.</p>
+</div>
+<div id="procedures" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Procedures<a href="mitre-attck.html#procedures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>While <strong>tactiques</strong> address the question <em>Why</em>, <strong>techniques</strong> address the question <em>What</em> then <strong>procedures</strong> are examples of <em>How</em>.
+Procedures are descriptions of the steps necessary to implement the technique to perform the technique.</p>
+</div>
+<div id="attck-for-ai-systems" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> ATT&amp;CK for AI systems<a href="mitre-attck.html#attck-for-ai-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The ATT&amp;CK matrix was developed for attacks on IT infrastructure and applies to cyber security in the classical sense. However, due to its popularity, work is underway to adapt this approach to security analysis of AI systems. An example of the solution being developed by MITRE is the ATLAS matrix <span class="citation"><a href="#ref-atlas-att">[7]</a></span>, <span class="citation"><a href="#ref-atlas-att2">[8]</a></span>.</p>
+<div class="float" id="fig:mitreatlas">
+<img src="images/mitre_atlas.png" alt="ATLAS - Adversarial Threat Landscape for Artificial-Intelligence Systems" />
+<div class="figcaption">ATLAS - Adversarial Threat Landscape for Artificial-Intelligence Systems</div>
+</div>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body">
+<div id="ref-mitre-att" class="csl-entry">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">MITRE, <em><span class="nocase">Adversarial Tactics, Techniques, and Common Knowledge (ATT&amp;CK) Matrix</span></em>. MITRE, 2023. Available: <a href="https://attack.mitre.org/">https://attack.mitre.org/</a></div>
+</div>
+<div id="ref-atlas-att" class="csl-entry">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">MITRE, <em><span class="nocase">Adversarial Threat Landscape for Artificial-Intelligence Systems (ATLAS) Matrix</span></em>. MITRE, 2023. Available: <a href="https://atlas.mitre.org/matrices/ATLAS">https://atlas.mitre.org/matrices/ATLAS</a></div>
+</div>
+<div id="ref-atlas-att2" class="csl-entry">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">MITRE, <em><span>Adversarial ML Threat Matrix</span></em>. MITRE, 2023. Available: <a href="https://github.com/mitre/advmlthreatmatrix">https://github.com/mitre/advmlthreatmatrix</a></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="model-evaluation-levels.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/pbiecek/ama/edit/master/10-mitre-attack.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["book.pdf", "book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
