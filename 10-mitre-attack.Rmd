@@ -14,7 +14,7 @@ First, let's familiarise with the nomenclature used in ATT&CK framework (Adversa
 
 A **tactic** refers to a high-level objective or goal that an adversary aims to achieve during a cyber attack. It represents the overarching category of activities or actions employed by attackers to accomplish their malicious objectives within a network or system. 
 
-There are 11 tactics defined within the ATT&CK framework, each representing a distinct phase or goal in the cyber attack lifecycle (these are columns in the matrix presented in Figure [@fig:mitre]):
+There are 12 tactics defined within the ATT&CK framework, each representing a distinct phase or goal in the cyber attack lifecycle (these are columns in the matrix presented in Figure [@fig:mitre]):
 
 - **Initial Access:** This tactic involves the methods an attacker uses to gain initial entry into a system or network environment.
 - **Execution:** Tactics related to techniques used to run malicious code or commands on a victim's system.
@@ -48,4 +48,25 @@ The ATT&CK matrix was developed for attacks on IT infrastructure and applies to 
 
 
 ![ATLAS - Adversarial Threat Landscape for Artificial-Intelligence Systems](images/mitre_atlas.png){#fig:mitreatlas}
+
+## Pros and cons
+
+The ATT&CK matrix was designed for AI systems. It can be useful as a reference for machine learning-based systems, but it's a risky interpolation. From the perspective of AI systems, the ATT&CK matrix offers some unique pros and a new perspective, but it also has some drawbacks or shortcomings. Here is a subjective selection of one and the other.
+
+
+The undoubted advantage is the attacker's  perspective. The matrix resembles an hacker playbook, but at the same time allows the security  team to check if some security problems are missed or not. 
+
+Second advantage is the standardized language, the framework provides a standardized terminology and taxonomy for cybersecurity professionals, allowing them to communicate more effectively about threats, tactics, and techniques used by adversaries.
+
+Not to be forgotten the huge community support. New threads needs to be identified quickly and the collaboration among cybersecurity professionals and organizations, allows to stay updated with evolving threats and defensive strategies.
+
+And since AI systems are parts of IT systems ATLAS and ATT&CK align new AI related threads with known operating schemes. This facilitates the synchronization of the team working on the security of AI models as well as IT infrastructure
+
+
+With the huge advantages of the ATT&CK matrix, it is worth keeping in mind the potential weaknesses. 
+The core element of this framework is a list of 12 tactics that describe successive processes for escalating access and control over an IT system. In the case of classic systems in which the ultimate success is often to gain control on the system, this approach makes sense and is very natural. In the case of AI systems, root access to bash the main server is not the ultimate goal and the escalation of access to the model itself also has a different flow. So be careful since familiar paths and a mindset that has proven itself in IT security does not remove new risks and new techniques for attacking AI systems from the horizon.
+
+Also the ATT&CK matrix provides detailed descriptions of tactics and techniques but may lack the context of specific environments or industries, requiring customization for individual organizational needs. In the case of AI systems that are often tailored to the modality being analyzed (text, image, audio) or application (finance, medicine), the devil may be in the details.
+
+ATT&CK primarily focuses on cataloging known techniques used by adversaries. It might not cover novel or emerging attack methods immediately, leaving a gap in addressing new threats. And in the case of AI systems safety, which is a very young discipline, new problems and attack ideas emerge very quickly.
 

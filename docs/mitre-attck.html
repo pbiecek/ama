@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Chapter 2 MITRE ATT&amp;CK | Adversarial Model Analysis" />
   <meta property="og:type" content="book" />
-  <meta property="og:image" content="/images/detective_cap.png" />
+  <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="Red Team Notes" />
   
 
@@ -18,12 +18,12 @@
   <meta name="twitter:title" content="Chapter 2 MITRE ATT&amp;CK | Adversarial Model Analysis" />
   
   <meta name="twitter:description" content="Red Team Notes" />
-  <meta name="twitter:image" content="/images/detective_cap.png" />
+  <meta name="twitter:image" content="/images/cover.png" />
 
 <meta name="author" content="Przemysław Biecek" />
 
 
-<meta name="date" content="2023-11-19" />
+<meta name="date" content="2023-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -109,6 +109,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.2" data-path="mitre-attck.html"><a href="mitre-attck.html#techniques"><i class="fa fa-check"></i><b>2.2</b> Techniques</a></li>
 <li class="chapter" data-level="2.3" data-path="mitre-attck.html"><a href="mitre-attck.html#procedures"><i class="fa fa-check"></i><b>2.3</b> Procedures</a></li>
 <li class="chapter" data-level="2.4" data-path="mitre-attck.html"><a href="mitre-attck.html#attck-for-ai-systems"><i class="fa fa-check"></i><b>2.4</b> ATT&amp;CK for AI systems</a></li>
+<li class="chapter" data-level="2.5" data-path="mitre-attck.html"><a href="mitre-attck.html#pros-and-cons"><i class="fa fa-check"></i><b>2.5</b> Pros and cons</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -144,7 +145,7 @@ div.csl-indent {
 <div id="tactics" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Tactics<a href="mitre-attck.html#tactics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A <strong>tactic</strong> refers to a high-level objective or goal that an adversary aims to achieve during a cyber attack. It represents the overarching category of activities or actions employed by attackers to accomplish their malicious objectives within a network or system.</p>
-<p>There are 11 tactics defined within the ATT&amp;CK framework, each representing a distinct phase or goal in the cyber attack lifecycle (these are columns in the matrix presented in Figure <span class="citation"><a href="#ref-fig:mitre"><strong>fig:mitre?</strong></a></span>):</p>
+<p>There are 12 tactics defined within the ATT&amp;CK framework, each representing a distinct phase or goal in the cyber attack lifecycle (these are columns in the matrix presented in Figure <span class="citation"><a href="#ref-fig:mitre"><strong>fig:mitre?</strong></a></span>):</p>
 <ul>
 <li><strong>Initial Access:</strong> This tactic involves the methods an attacker uses to gain initial entry into a system or network environment.</li>
 <li><strong>Execution:</strong> Tactics related to techniques used to run malicious code or commands on a victim’s system.</li>
@@ -177,6 +178,18 @@ Procedures are descriptions of the steps necessary to implement the technique to
 <img src="images/mitre_atlas.png" alt="ATLAS - Adversarial Threat Landscape for Artificial-Intelligence Systems" />
 <div class="figcaption">ATLAS - Adversarial Threat Landscape for Artificial-Intelligence Systems</div>
 </div>
+</div>
+<div id="pros-and-cons" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Pros and cons<a href="mitre-attck.html#pros-and-cons" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The ATT&amp;CK matrix was designed for AI systems. It can be useful as a reference for machine learning-based systems, but it’s a risky interpolation. From the perspective of AI systems, the ATT&amp;CK matrix offers some unique pros and a new perspective, but it also has some drawbacks or shortcomings. Here is a subjective selection of one and the other.</p>
+<p>The undoubted advantage is the attacker’s perspective. The matrix resembles an hacker playbook, but at the same time allows the security team to check if some security problems are missed or not.</p>
+<p>Second advantage is the standardized language, the framework provides a standardized terminology and taxonomy for cybersecurity professionals, allowing them to communicate more effectively about threats, tactics, and techniques used by adversaries.</p>
+<p>Not to be forgotten the huge community support. New threads needs to be identified quickly and the collaboration among cybersecurity professionals and organizations, allows to stay updated with evolving threats and defensive strategies.</p>
+<p>And since AI systems are parts of IT systems ATLAS and ATT&amp;CK align new AI related threads with known operating schemes. This facilitates the synchronization of the team working on the security of AI models as well as IT infrastructure</p>
+<p>With the huge advantages of the ATT&amp;CK matrix, it is worth keeping in mind the potential weaknesses.
+The core element of this framework is a list of 12 tactics that describe successive processes for escalating access and control over an IT system. In the case of classic systems in which the ultimate success is often to gain control on the system, this approach makes sense and is very natural. In the case of AI systems, root access to bash the main server is not the ultimate goal and the escalation of access to the model itself also has a different flow. So be careful since familiar paths and a mindset that has proven itself in IT security does not remove new risks and new techniques for attacking AI systems from the horizon.</p>
+<p>Also the ATT&amp;CK matrix provides detailed descriptions of tactics and techniques but may lack the context of specific environments or industries, requiring customization for individual organizational needs. In the case of AI systems that are often tailored to the modality being analyzed (text, image, audio) or application (finance, medicine), the devil may be in the details.</p>
+<p>ATT&amp;CK primarily focuses on cataloging known techniques used by adversaries. It might not cover novel or emerging attack methods immediately, leaving a gap in addressing new threats. And in the case of AI systems safety, which is a very young discipline, new problems and attack ideas emerge very quickly.</p>
 
 </div>
 </div>
