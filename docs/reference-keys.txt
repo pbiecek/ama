@@ -6,3 +6,17 @@ procedures
 attck-for-ai-systems
 techniques
 pros-and-cons
+open-worldwide-application-security-project-owasp
+ml012023-input-manipulation-attack
+ml022023-data-poisoning-attack
+ml032023-model-inversion-attack
+ml042023-membership-inference-attack
+ml052023-model-stealing
+ml062023-ai-supply-chain-attacks
+ml072023-troyan-horse-attack
+ml082023-model-skewing
+ml092023-output-integrity-attack
+ml102023-model-poisoning
+nist-ai-risk-management-framework-ai-rmf
+adversarial-robustness-toolbox-art
+dependable-and-explainable-learning-deel
