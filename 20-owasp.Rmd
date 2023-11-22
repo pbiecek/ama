@@ -7,6 +7,8 @@ One of OWASP's best-known projects is the Top 10 - a list of the ten most signif
 While classically OWASP was focused on software, new in recent months is the inclusion of specific vulnerabilities and challenges to AI systems.
 As a result we get two new lists of top 10 vulnerabilities. [OWASP Machine Learning Security Top Ten](https://owasp.org/www-project-machine-learning-security-top-10/) focused on the security of ML systems and [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) focused on systems using large language models (LLMs).
 
+![Top 10 OWASP ML Sec](images/owasp.png)
+
 Below we briefly overview the Top 10 for Machine Learning Security.
 
 **Note** *The list presented is still available as a draft version. Some positions are quite similar and perhaps the final Top 10 will be a little different. The following list is an abridged summary. The full version can be found at  https://mltop10.info/.*
