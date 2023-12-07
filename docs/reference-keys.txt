@@ -20,3 +20,13 @@ ml102023-model-poisoning
 nist-ai-risk-management-framework-ai-rmf
 adversarial-robustness-toolbox-art
 dependable-and-explainable-learning-deel
+the-two-xai-cultures
+introduction-1
+the-user-oriented-explanations-culture
+the-developer-oriented-explanations-culture
+challenges
+achilles-heels
+rashomon-perspectives
+champion-challenger-analysis
+user-oriented-explanations
+the-developer-oriented-explanations

@@ -1,0 +1,86 @@
+# The Two XAI Cultures
+
+In 2001, Leo Breiman published a phenomenal paper "The Two Cultures" [@breiman2001statistical], in which he diagnosed the growing gap between the mainstream trends in academic research conducted by statisticians against new challenges, such as the curse of dimensionality, the construction of effective predictive algorithms.
+ His paper is so well constructed that its narrative structure can be applied to diagnose problems in many research areas standing on the edge of an identity crisis.
+
+In this chapter, I argue that the field of explainable artificial intelligence (XAI) is also facing such a crisis, and two cultures of researchers are evident in this area as well. Moreover, without a better understanding of the different goals facing these cultures, no further progress is possible. 
+
+In the second part of this chapter, three key challenges facing one culture are presented and illustrated using a real dataset as an example.
+
+## Introduction
+
+Machine learning starts with models.
+Think of a model as a function $f:\mathcal R^d \rightarrow \mathcal R$ that calculates a numerical score based on $d$-dimensional input.
+In machine learning, these functions are often constructed based on training data and their internal operations are complex, often described by thousands, millions or even billions of parameters. Direct parameter-by-parameter analysis of the model is often not feasible, but reasoning about the model's behavior is desired. At least two goals of analyzing the model can be identified.
+
+*Communication* of the key premises behind model predictions. The premises should be in line with user expectations and knowledge.
+
+*Discovering* situations in which the model does not work as expected by an operator. In such a situation, the model's predictions may be wrong or the operator's expectations may be wrong. 
+
+There are two different approaches toward these goals:
+
+### User Oriented Explanations 
+
+One way to think about explanations is from the perspective of a citizen who receives a decision that he/she doesn't understand, or disagrees with, or is curious about, and asks 'where did this decision come from?' Whether it involves credit, or access to medical services, or restaurant recommendations is secondary. The important thing is that the person asking 'Why' is the user of the AI system. 
+
+This perspective places the emphasis on the model's decision received by a particular individual and assumes that explainability will help him accept or challenge that decision.
+
+![User Oriented Explanations](images/two-culture-users.png)
+
+Analysis of a model in this culture is oriented toward user rights (e.g. mythical ,,right to explain''). Discussion of the need for and desirability of explanations revolves around such concepts as  trust, right to explanation, causality,  fair and ethical decision-making.  informativeness. A paper that has resonated and illustrates well the perspective of this culture is [@Lipton2018].
+
+*When*: this perspective is most prevalent after model deployment.
+
+*Validation*: user studies (although there are now more papers saying that a user study is needed than papers that take a professional approach to the topic of user study).
+
+*Estimated culture population*: majority of those publishing in the XAI area.
+
+### The Developer Oriented Explanations 
+
+Another perspective on thinking about explanations is through eyes an engineer building or testing a model, who wants the model to work in every, or almost every, case. Explanations can help diagnose and perhaps fix errors in model performance.
+
+This perspective emphasizes the model that should work well for all sorts of data. 
+
+![Developer Oriented Explanations](images/two-culture-developers.png)
+
+Analysis of a model in this culture is oriented toward new ideas on how to improve the model. 
+Typical questions asked by this culture are if explanations are  fidel to the model, give global perspective, can be used to debug models, can be used to improve models. A very popular paper that gives this perspective is [@ribeiro2016why].
+
+*When*: this perspective is most prevalent before model deployment.  Although it can also be present after deployment (e.g., monitoring model performance, port-mortem analysis).
+
+*Validation*: Effectiveness in finding model weaknesses, effectiveness in generating new and better models.
+
+*Estimated culture population*: most people using XAI in a business setting
+
+
+## Challenges
+
+In this section I will argue that the focus in the user oriented explanations has:
+
+- Led to irrelevant theory and questionable scientific conclusions (since in mose cases the target user population is not specified)
+- Kept ML researchers from using more suitable performance measures (since measuring trust in very shady concept)
+- Prevented ML researchers from working on exciting new problems (since it is hard to do progress without good validation scheme)
+
+The developer-focused perspective offers interesting new challenges just waiting to be solved. I offer three example problems below. In part they intersect with Breiman's proposals (n.p. Rashomon perspective), in part they are specific to XAI techniques.
+
+
+### Achilles' heels
+
+Identifying potential weaknesses of the model, finding its Achilles' heel.
+
+TODO: refer to the FIFA case and 
+https://journal.r-project.org/archive/2019/RJ-2019-036/index.html
+
+### Rashomon perspectives
+
+Understanding the root cause of identified problems - Rashomon perspectives.
+
+TODO: refer to https://arxiv.org/abs/2302.13356
+
+### Champion Challenger analysis
+
+Apply mitigation strategies and see if they worked and led to better model behavior - Champion Challenger analysis.
+
+TODO: 
+refer / extend analysis of funnel plot from https://modeloriented.github.io/DALEXtra/reference/funnel_measure.html
+
