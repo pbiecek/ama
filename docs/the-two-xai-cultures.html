@@ -32,15 +32,15 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="model-evaluation-levels.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -49,9 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
 
 
 
@@ -164,7 +164,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="the-two-xai-cultures" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> The Two XAI Cultures<a href="the-two-xai-cultures.html#the-two-xai-cultures" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In 2001, Leo Breiman published a phenomenal paper “The Two Cultures” <span class="citation"><a href="#ref-breiman2001statistical">[1]</a></span>, in which he diagnosed the growing gap between the mainstream trends in academic research conducted by statisticians against new challenges, such as the curse of dimensionality, the construction of effective predictive algorithms.
+<p>In 2001, Leo Breiman published a phenomenal paper “The Two Cultures” <span class="citation"><a href="#ref-breiman2001statistical">[4]</a></span>, in which he diagnosed the growing gap between the mainstream trends in academic research conducted by statisticians against new challenges, such as the curse of dimensionality, the construction of effective predictive algorithms.
 His paper is so well constructed that its narrative structure can be applied to diagnose problems in many research areas standing on the edge of an identity crisis.</p>
 <p>In this chapter, I argue that the field of explainable artificial intelligence (XAI) is also facing such a crisis, and two cultures of researchers are evident in this area as well. Moreover, without a better understanding of the different goals facing these cultures, no further progress is possible.</p>
 <p>In the second part of this chapter, three key challenges facing one culture are presented and illustrated using a real dataset as an example.</p>
@@ -184,7 +184,7 @@ In machine learning, these functions are often constructed based on training dat
 <img src="images/two-culture-users.png" alt="User Oriented Explanations" />
 <div class="figcaption">User Oriented Explanations</div>
 </div>
-<p>Analysis of a model in this culture is oriented toward user rights (e.g. mythical ,,right to explain’’). Discussion of the need for and desirability of explanations revolves around such concepts as trust, right to explanation, causality, fair and ethical decision-making. informativeness. A paper that has resonated and illustrates well the perspective of this culture is <span class="citation"><a href="#ref-Lipton2018">[2]</a></span>.</p>
+<p>Analysis of a model in this culture is oriented toward user rights (e.g. mythical ,,right to explain’’). Discussion of the need for and desirability of explanations revolves around such concepts as trust, right to explanation, causality, fair and ethical decision-making. informativeness. A paper that has resonated and illustrates well the perspective of this culture is <span class="citation"><a href="#ref-Lipton2018">[5]</a></span>.</p>
 <p><em>When</em>: this perspective is most prevalent after model deployment.</p>
 <p><em>Validation</em>: user studies (although there are now more papers saying that a user study is needed than papers that take a professional approach to the topic of user study).</p>
 <p><em>Estimated culture population</em>: majority of those publishing in the XAI area.</p>
@@ -198,7 +198,7 @@ In machine learning, these functions are often constructed based on training dat
 <div class="figcaption">Developer Oriented Explanations</div>
 </div>
 <p>Analysis of a model in this culture is oriented toward new ideas on how to improve the model.
-Typical questions asked by this culture are if explanations are fidel to the model, give global perspective, can be used to debug models, can be used to improve models. A very popular paper that gives this perspective is <span class="citation"><a href="#ref-ribeiro2016why">[3]</a></span>.</p>
+Typical questions asked by this culture are if explanations are fidel to the model, give global perspective, can be used to debug models, can be used to improve models. A very popular paper that gives this perspective is <span class="citation"><a href="#ref-ribeiro2016why">[6]</a></span>.</p>
 <p><em>When</em>: this perspective is most prevalent before model deployment. Although it can also be present after deployment (e.g., monitoring model performance, port-mortem analysis).</p>
 <p><em>Validation</em>: Effectiveness in finding model weaknesses, effectiveness in generating new and better models.</p>
 <p><em>Estimated culture population</em>: most people using XAI in a business setting</p>
@@ -236,13 +236,13 @@ refer / extend analysis of funnel plot from <a href="https://modeloriented.githu
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-breiman2001statistical" class="csl-entry">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">L. Breiman, <span>“Statistical modeling: The two cultures,”</span> <em>Statistical Science</em>, vol. 16, no. 3, pp. 199–231, 2001, doi: <a href="https://doi.org/10.1214/ss/1009213726">10.1214/ss/1009213726</a>.</div>
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">L. Breiman, <span>“Statistical modeling: The two cultures,”</span> <em>Statistical Science</em>, vol. 16, no. 3, pp. 199–231, 2001, doi: <a href="https://doi.org/10.1214/ss/1009213726">10.1214/ss/1009213726</a>.</div>
 </div>
 <div id="ref-Lipton2018" class="csl-entry">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Z. C. Lipton, <span>“<span class="nocase">The Mythos of Model Interpretability</span>,”</span> <em>Queue</em>, vol. 16, no. 3, pp. 31–57, 2018, doi: <a href="https://doi.org/10.1145/3236386.3241340">10.1145/3236386.3241340</a>.</div>
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Z. C. Lipton, <span>“<span class="nocase">The Mythos of Model Interpretability</span>,”</span> <em>Queue</em>, vol. 16, no. 3, pp. 31–57, 2018, doi: <a href="https://doi.org/10.1145/3236386.3241340">10.1145/3236386.3241340</a>.</div>
 </div>
 <div id="ref-ribeiro2016why" class="csl-entry">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">M. T. Ribeiro, S. Singh, and C. Guestrin, <span>“<span class="nocase">”Why Should I Trust You?”: Explaining the Predictions of Any Classifier</span>,”</span> in <em>ACM SIGKDD conference on knowledge discovery and data mining</em>, 2016, pp. 1135–1144. doi: <a href="https://doi.org/10.1145/2939672.2939778">10.1145/2939672.2939778</a>.</div>
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">M. T. Ribeiro, S. Singh, and C. Guestrin, <span>“<span class="nocase">”Why Should I Trust You?”: Explaining the Predictions of Any Classifier</span>,”</span> in <em>ACM SIGKDD conference on knowledge discovery and data mining</em>, 2016, pp. 1135–1144. doi: <a href="https://doi.org/10.1145/2939672.2939778">10.1145/2939672.2939778</a>.</div>
 </div>
 </div>
             </section>
@@ -254,14 +254,14 @@ refer / extend analysis of funnel plot from <a href="https://modeloriented.githu
 <a href="model-evaluation-levels.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({

@@ -23,7 +23,7 @@
 <meta name="author" content="Przemysław Biecek" />
 
 
-<meta name="date" content="2023-11-22" />
+<meta name="date" content="2023-12-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,15 +32,15 @@
   
 <link rel="prev" href="dependable-and-explainable-learning-deel.html"/>
 
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -49,9 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
 
 
 
@@ -102,31 +102,45 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="model-evaluation-levels.html"><a href="model-evaluation-levels.html"><i class="fa fa-check"></i><b>1</b> Model Evaluation Levels</a></li>
-<li class="chapter" data-level="2" data-path="mitre-attck.html"><a href="mitre-attck.html"><i class="fa fa-check"></i><b>2</b> MITRE ATT&amp;CK</a>
+<li class="chapter" data-level="1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html"><i class="fa fa-check"></i><b>1</b> The Two XAI Cultures</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="mitre-attck.html"><a href="mitre-attck.html#tactics"><i class="fa fa-check"></i><b>2.1</b> Tactics</a></li>
-<li class="chapter" data-level="2.2" data-path="mitre-attck.html"><a href="mitre-attck.html#techniques"><i class="fa fa-check"></i><b>2.2</b> Techniques</a></li>
-<li class="chapter" data-level="2.3" data-path="mitre-attck.html"><a href="mitre-attck.html#procedures"><i class="fa fa-check"></i><b>2.3</b> Procedures</a></li>
-<li class="chapter" data-level="2.4" data-path="mitre-attck.html"><a href="mitre-attck.html#attck-for-ai-systems"><i class="fa fa-check"></i><b>2.4</b> ATT&amp;CK for AI systems</a></li>
-<li class="chapter" data-level="2.5" data-path="mitre-attck.html"><a href="mitre-attck.html#pros-and-cons"><i class="fa fa-check"></i><b>2.5</b> Pros and cons</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html"><i class="fa fa-check"></i><b>3</b> Open Worldwide Application Security Project (OWASP)</a>
+<li class="chapter" data-level="1.1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml012023-input-manipulation-attack"><i class="fa fa-check"></i><b>3.1</b> ML01:2023 Input Manipulation Attack</a></li>
-<li class="chapter" data-level="3.2" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml022023-data-poisoning-attack"><i class="fa fa-check"></i><b>3.2</b> ML02:2023 Data Poisoning Attack</a></li>
-<li class="chapter" data-level="3.3" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml032023-model-inversion-attack"><i class="fa fa-check"></i><b>3.3</b> ML03:2023 Model Inversion Attack</a></li>
-<li class="chapter" data-level="3.4" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml042023-membership-inference-attack"><i class="fa fa-check"></i><b>3.4</b> ML04:2023 Membership Inference Attack</a></li>
-<li class="chapter" data-level="3.5" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml052023-model-stealing"><i class="fa fa-check"></i><b>3.5</b> ML05:2023 Model Stealing</a></li>
-<li class="chapter" data-level="3.6" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml062023-ai-supply-chain-attacks"><i class="fa fa-check"></i><b>3.6</b> ML06:2023 AI Supply Chain Attacks</a></li>
-<li class="chapter" data-level="3.7" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml072023-troyan-horse-attack"><i class="fa fa-check"></i><b>3.7</b> ML07:2023 Troyan Horse Attack</a></li>
-<li class="chapter" data-level="3.8" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml082023-model-skewing"><i class="fa fa-check"></i><b>3.8</b> ML08:2023 Model Skewing</a></li>
-<li class="chapter" data-level="3.9" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml092023-output-integrity-attack"><i class="fa fa-check"></i><b>3.9</b> ML09:2023 Output Integrity Attack</a></li>
-<li class="chapter" data-level="3.10" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml102023-model-poisoning"><i class="fa fa-check"></i><b>3.10</b> ML10:2023 Model Poisoning</a></li>
+<li class="chapter" data-level="1.1.1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#user-oriented-explanations"><i class="fa fa-check"></i><b>1.1.1</b> User Oriented Explanations</a></li>
+<li class="chapter" data-level="1.1.2" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#the-developer-oriented-explanations"><i class="fa fa-check"></i><b>1.1.2</b> The Developer Oriented Explanations</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html"><i class="fa fa-check"></i><b>4</b> NIST AI Risk Management Framework (AI RMF)</a></li>
-<li class="chapter" data-level="5" data-path="adversarial-robustness-toolbox-art.html"><a href="adversarial-robustness-toolbox-art.html"><i class="fa fa-check"></i><b>5</b> Adversarial Robustness Toolbox (ART)</a></li>
-<li class="chapter" data-level="6" data-path="dependable-and-explainable-learning-deel.html"><a href="dependable-and-explainable-learning-deel.html"><i class="fa fa-check"></i><b>6</b> DEpendable and Explainable Learning (DEEL)</a></li>
+<li class="chapter" data-level="1.2" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#challenges"><i class="fa fa-check"></i><b>1.2</b> Challenges</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#achilles-heels"><i class="fa fa-check"></i><b>1.2.1</b> Achilles’ heels</a></li>
+<li class="chapter" data-level="1.2.2" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#rashomon-perspectives"><i class="fa fa-check"></i><b>1.2.2</b> Rashomon perspectives</a></li>
+<li class="chapter" data-level="1.2.3" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#champion-challenger-analysis"><i class="fa fa-check"></i><b>1.2.3</b> Champion Challenger analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="model-evaluation-levels.html"><a href="model-evaluation-levels.html"><i class="fa fa-check"></i><b>2</b> Model Evaluation Levels</a></li>
+<li class="chapter" data-level="3" data-path="mitre-attck.html"><a href="mitre-attck.html"><i class="fa fa-check"></i><b>3</b> MITRE ATT&amp;CK</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="mitre-attck.html"><a href="mitre-attck.html#tactics"><i class="fa fa-check"></i><b>3.1</b> Tactics</a></li>
+<li class="chapter" data-level="3.2" data-path="mitre-attck.html"><a href="mitre-attck.html#techniques"><i class="fa fa-check"></i><b>3.2</b> Techniques</a></li>
+<li class="chapter" data-level="3.3" data-path="mitre-attck.html"><a href="mitre-attck.html#procedures"><i class="fa fa-check"></i><b>3.3</b> Procedures</a></li>
+<li class="chapter" data-level="3.4" data-path="mitre-attck.html"><a href="mitre-attck.html#attck-for-ai-systems"><i class="fa fa-check"></i><b>3.4</b> ATT&amp;CK for AI systems</a></li>
+<li class="chapter" data-level="3.5" data-path="mitre-attck.html"><a href="mitre-attck.html#pros-and-cons"><i class="fa fa-check"></i><b>3.5</b> Pros and cons</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html"><i class="fa fa-check"></i><b>4</b> Open Worldwide Application Security Project (OWASP)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml012023-input-manipulation-attack"><i class="fa fa-check"></i><b>4.1</b> ML01:2023 Input Manipulation Attack</a></li>
+<li class="chapter" data-level="4.2" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml022023-data-poisoning-attack"><i class="fa fa-check"></i><b>4.2</b> ML02:2023 Data Poisoning Attack</a></li>
+<li class="chapter" data-level="4.3" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml032023-model-inversion-attack"><i class="fa fa-check"></i><b>4.3</b> ML03:2023 Model Inversion Attack</a></li>
+<li class="chapter" data-level="4.4" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml042023-membership-inference-attack"><i class="fa fa-check"></i><b>4.4</b> ML04:2023 Membership Inference Attack</a></li>
+<li class="chapter" data-level="4.5" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml052023-model-stealing"><i class="fa fa-check"></i><b>4.5</b> ML05:2023 Model Stealing</a></li>
+<li class="chapter" data-level="4.6" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml062023-ai-supply-chain-attacks"><i class="fa fa-check"></i><b>4.6</b> ML06:2023 AI Supply Chain Attacks</a></li>
+<li class="chapter" data-level="4.7" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml072023-troyan-horse-attack"><i class="fa fa-check"></i><b>4.7</b> ML07:2023 Troyan Horse Attack</a></li>
+<li class="chapter" data-level="4.8" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml082023-model-skewing"><i class="fa fa-check"></i><b>4.8</b> ML08:2023 Model Skewing</a></li>
+<li class="chapter" data-level="4.9" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml092023-output-integrity-attack"><i class="fa fa-check"></i><b>4.9</b> ML09:2023 Output Integrity Attack</a></li>
+<li class="chapter" data-level="4.10" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml102023-model-poisoning"><i class="fa fa-check"></i><b>4.10</b> ML10:2023 Model Poisoning</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html"><i class="fa fa-check"></i><b>5</b> NIST AI Risk Management Framework (AI RMF)</a></li>
+<li class="chapter" data-level="6" data-path="adversarial-robustness-toolbox-art.html"><a href="adversarial-robustness-toolbox-art.html"><i class="fa fa-check"></i><b>6</b> Adversarial Robustness Toolbox (ART)</a></li>
+<li class="chapter" data-level="7" data-path="dependable-and-explainable-learning-deel.html"><a href="dependable-and-explainable-learning-deel.html"><i class="fa fa-check"></i><b>7</b> DEpendable and Explainable Learning (DEEL)</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
@@ -153,19 +167,49 @@ div.csl-indent {
 
 <div id="refs" class="references csl-bib-body">
 <div class="csl-entry">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Data Robot Doc, <em><span class="nocase">Out-of-time validation (OTV)</span></em>. Data Robot Doc, 2023. Available: <a href="https://docs.datarobot.com/en/docs/modeling/special-workflows/otv.html">https://docs.datarobot.com/en/docs/modeling/special-workflows/otv.html</a></div>
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">European Commission, <em><span class="nocase">Proposal for a ’Regulation of the European Parliament and of the Council’</span></em>. European Commission, 2021. Available: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206</a></div>
 </div>
 <div class="csl-entry">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">M. Elena, M. Valentin, C. Rafaela, and T. Codrut, <span>“<span class="nocase">An IFRS 9 Framework for Model Validation</span>,”</span> <em>International Journal of Business and Management Invention</em>, vol. 10, pp. 2319–8028, 2021, doi: <a href="https://doi.org/10.35629/8028-1002031924">10.35629/8028-1002031924</a>.</div>
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Joe Biden, <em><span class="nocase">Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence</span></em>. President of USA, 2023. Available: <a href="https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/">https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/</a></div>
 </div>
 <div class="csl-entry">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">S. Y. Ho, K. Phua, L. Wong, and W. W. Bin Goh, <span>“Extensions of the <span>External</span> <span>Validation</span> for <span>Checking</span> <span>Learned</span> <span>Model</span> <span>Interpretability</span> and <span>Generalizability</span>,”</span> <em>Patterns</em>, vol. 1, no. 8, p. 100129, 2020, doi: <a href="https://doi.org/10.1016/j.patter.2020.100129">10.1016/j.patter.2020.100129</a>.</div>
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">P. Biecek and T. Burzykowski, <em><span>Explanatory Model Analysis</span></em>. Chapman; Hall/CRC, New York, 2021. Available: <a href="https://ema.drwhy.ai/">https://ema.drwhy.ai/</a></div>
 </div>
 <div class="csl-entry">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Subir Verma, <em><span>Adversarial Validation: Battling Overfitting</span></em>. MLearning.ai, 2020. Available: <a href="https://medium.com/mlearning-ai/adversarial-validation-battling-overfitting-334372b950ba">https://medium.com/mlearning-ai/adversarial-validation-battling-overfitting-334372b950ba</a></div>
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">L. Breiman, <span>“Statistical modeling: The two cultures,”</span> <em>Statistical Science</em>, vol. 16, no. 3, pp. 199–231, 2001, doi: <a href="https://doi.org/10.1214/ss/1009213726">10.1214/ss/1009213726</a>.</div>
 </div>
 <div class="csl-entry">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Meta, <em><span class="nocase">The next generation of our open source large language model</span></em>. Meta, 2023. Available: <a href="https://ai.meta.com/llama/">https://ai.meta.com/llama/</a></div>
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Z. C. Lipton, <span>“<span class="nocase">The Mythos of Model Interpretability</span>,”</span> <em>Queue</em>, vol. 16, no. 3, pp. 31–57, 2018, doi: <a href="https://doi.org/10.1145/3236386.3241340">10.1145/3236386.3241340</a>.</div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">M. T. Ribeiro, S. Singh, and C. Guestrin, <span>“<span class="nocase">”Why Should I Trust You?”: Explaining the Predictions of Any Classifier</span>,”</span> in <em>ACM SIGKDD conference on knowledge discovery and data mining</em>, 2016, pp. 1135–1144. doi: <a href="https://doi.org/10.1145/2939672.2939778">10.1145/2939672.2939778</a>.</div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Data Robot Doc, <em><span class="nocase">Out-of-time validation (OTV)</span></em>. Data Robot Doc, 2023. Available: <a href="https://docs.datarobot.com/en/docs/modeling/special-workflows/otv.html">https://docs.datarobot.com/en/docs/modeling/special-workflows/otv.html</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">M. Elena, M. Valentin, C. Rafaela, and T. Codrut, <span>“<span class="nocase">An IFRS 9 Framework for Model Validation</span>,”</span> <em>International Journal of Business and Management Invention</em>, vol. 10, pp. 2319–8028, 2021, doi: <a href="https://doi.org/10.35629/8028-1002031924">10.35629/8028-1002031924</a>.</div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">S. Y. Ho, K. Phua, L. Wong, and W. W. Bin Goh, <span>“Extensions of the <span>External</span> <span>Validation</span> for <span>Checking</span> <span>Learned</span> <span>Model</span> <span>Interpretability</span> and <span>Generalizability</span>,”</span> <em>Patterns</em>, vol. 1, no. 8, p. 100129, 2020, doi: <a href="https://doi.org/10.1016/j.patter.2020.100129">10.1016/j.patter.2020.100129</a>.</div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">Subir Verma, <em><span>Adversarial Validation: Battling Overfitting</span></em>. MLearning.ai, 2020. Available: <a href="https://medium.com/mlearning-ai/adversarial-validation-battling-overfitting-334372b950ba">https://medium.com/mlearning-ai/adversarial-validation-battling-overfitting-334372b950ba</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">Meta, <em><span class="nocase">The next generation of our open source large language model</span></em>. Meta, 2023. Available: <a href="https://ai.meta.com/llama/">https://ai.meta.com/llama/</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">MITRE, <em><span class="nocase">Adversarial Tactics, Techniques, and Common Knowledge (ATT&amp;CK) Matrix</span></em>. MITRE, 2023. Available: <a href="https://attack.mitre.org/">https://attack.mitre.org/</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">MITRE, <em><span class="nocase">Adversarial Threat Landscape for Artificial-Intelligence Systems (ATLAS) Matrix</span></em>. MITRE, 2023. Available: <a href="https://atlas.mitre.org/matrices/ATLAS">https://atlas.mitre.org/matrices/ATLAS</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">MITRE, <em><span>Adversarial ML Threat Matrix</span></em>. MITRE, 2023. Available: <a href="https://github.com/mitre/advmlthreatmatrix">https://github.com/mitre/advmlthreatmatrix</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">OWASP, <em><span>Open Worldwide Application Security Project</span></em>. OWASP, 2023. Available: <a href="https://owasp.org/">https://owasp.org/</a></div>
 </div>
 </div>
 </div>
@@ -178,14 +222,14 @@ div.csl-indent {
 
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({

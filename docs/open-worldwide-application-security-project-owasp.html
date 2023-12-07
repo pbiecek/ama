@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Open Worldwide Application Security Project (OWASP) | Adversarial Model Analysis</title>
+  <title>Chapter 4 Open Worldwide Application Security Project (OWASP) | Adversarial Model Analysis</title>
   <meta name="description" content="Red Team Notes" />
   <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Open Worldwide Application Security Project (OWASP) | Adversarial Model Analysis" />
+  <meta property="og:title" content="Chapter 4 Open Worldwide Application Security Project (OWASP) | Adversarial Model Analysis" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="Red Team Notes" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Open Worldwide Application Security Project (OWASP) | Adversarial Model Analysis" />
+  <meta name="twitter:title" content="Chapter 4 Open Worldwide Application Security Project (OWASP) | Adversarial Model Analysis" />
   
   <meta name="twitter:description" content="Red Team Notes" />
   <meta name="twitter:image" content="/images/cover.png" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Przemysław Biecek" />
 
 
-<meta name="date" content="2023-11-22" />
+<meta name="date" content="2023-12-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,15 +32,15 @@
   
 <link rel="prev" href="mitre-attck.html"/>
 <link rel="next" href="nist-ai-risk-management-framework-ai-rmf.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -49,9 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
 
 
 
@@ -102,31 +102,45 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="model-evaluation-levels.html"><a href="model-evaluation-levels.html"><i class="fa fa-check"></i><b>1</b> Model Evaluation Levels</a></li>
-<li class="chapter" data-level="2" data-path="mitre-attck.html"><a href="mitre-attck.html"><i class="fa fa-check"></i><b>2</b> MITRE ATT&amp;CK</a>
+<li class="chapter" data-level="1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html"><i class="fa fa-check"></i><b>1</b> The Two XAI Cultures</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="mitre-attck.html"><a href="mitre-attck.html#tactics"><i class="fa fa-check"></i><b>2.1</b> Tactics</a></li>
-<li class="chapter" data-level="2.2" data-path="mitre-attck.html"><a href="mitre-attck.html#techniques"><i class="fa fa-check"></i><b>2.2</b> Techniques</a></li>
-<li class="chapter" data-level="2.3" data-path="mitre-attck.html"><a href="mitre-attck.html#procedures"><i class="fa fa-check"></i><b>2.3</b> Procedures</a></li>
-<li class="chapter" data-level="2.4" data-path="mitre-attck.html"><a href="mitre-attck.html#attck-for-ai-systems"><i class="fa fa-check"></i><b>2.4</b> ATT&amp;CK for AI systems</a></li>
-<li class="chapter" data-level="2.5" data-path="mitre-attck.html"><a href="mitre-attck.html#pros-and-cons"><i class="fa fa-check"></i><b>2.5</b> Pros and cons</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html"><i class="fa fa-check"></i><b>3</b> Open Worldwide Application Security Project (OWASP)</a>
+<li class="chapter" data-level="1.1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml012023-input-manipulation-attack"><i class="fa fa-check"></i><b>3.1</b> ML01:2023 Input Manipulation Attack</a></li>
-<li class="chapter" data-level="3.2" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml022023-data-poisoning-attack"><i class="fa fa-check"></i><b>3.2</b> ML02:2023 Data Poisoning Attack</a></li>
-<li class="chapter" data-level="3.3" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml032023-model-inversion-attack"><i class="fa fa-check"></i><b>3.3</b> ML03:2023 Model Inversion Attack</a></li>
-<li class="chapter" data-level="3.4" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml042023-membership-inference-attack"><i class="fa fa-check"></i><b>3.4</b> ML04:2023 Membership Inference Attack</a></li>
-<li class="chapter" data-level="3.5" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml052023-model-stealing"><i class="fa fa-check"></i><b>3.5</b> ML05:2023 Model Stealing</a></li>
-<li class="chapter" data-level="3.6" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml062023-ai-supply-chain-attacks"><i class="fa fa-check"></i><b>3.6</b> ML06:2023 AI Supply Chain Attacks</a></li>
-<li class="chapter" data-level="3.7" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml072023-troyan-horse-attack"><i class="fa fa-check"></i><b>3.7</b> ML07:2023 Troyan Horse Attack</a></li>
-<li class="chapter" data-level="3.8" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml082023-model-skewing"><i class="fa fa-check"></i><b>3.8</b> ML08:2023 Model Skewing</a></li>
-<li class="chapter" data-level="3.9" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml092023-output-integrity-attack"><i class="fa fa-check"></i><b>3.9</b> ML09:2023 Output Integrity Attack</a></li>
-<li class="chapter" data-level="3.10" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml102023-model-poisoning"><i class="fa fa-check"></i><b>3.10</b> ML10:2023 Model Poisoning</a></li>
+<li class="chapter" data-level="1.1.1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#user-oriented-explanations"><i class="fa fa-check"></i><b>1.1.1</b> User Oriented Explanations</a></li>
+<li class="chapter" data-level="1.1.2" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#the-developer-oriented-explanations"><i class="fa fa-check"></i><b>1.1.2</b> The Developer Oriented Explanations</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html"><i class="fa fa-check"></i><b>4</b> NIST AI Risk Management Framework (AI RMF)</a></li>
-<li class="chapter" data-level="5" data-path="adversarial-robustness-toolbox-art.html"><a href="adversarial-robustness-toolbox-art.html"><i class="fa fa-check"></i><b>5</b> Adversarial Robustness Toolbox (ART)</a></li>
-<li class="chapter" data-level="6" data-path="dependable-and-explainable-learning-deel.html"><a href="dependable-and-explainable-learning-deel.html"><i class="fa fa-check"></i><b>6</b> DEpendable and Explainable Learning (DEEL)</a></li>
+<li class="chapter" data-level="1.2" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#challenges"><i class="fa fa-check"></i><b>1.2</b> Challenges</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#achilles-heels"><i class="fa fa-check"></i><b>1.2.1</b> Achilles’ heels</a></li>
+<li class="chapter" data-level="1.2.2" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#rashomon-perspectives"><i class="fa fa-check"></i><b>1.2.2</b> Rashomon perspectives</a></li>
+<li class="chapter" data-level="1.2.3" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#champion-challenger-analysis"><i class="fa fa-check"></i><b>1.2.3</b> Champion Challenger analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="model-evaluation-levels.html"><a href="model-evaluation-levels.html"><i class="fa fa-check"></i><b>2</b> Model Evaluation Levels</a></li>
+<li class="chapter" data-level="3" data-path="mitre-attck.html"><a href="mitre-attck.html"><i class="fa fa-check"></i><b>3</b> MITRE ATT&amp;CK</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="mitre-attck.html"><a href="mitre-attck.html#tactics"><i class="fa fa-check"></i><b>3.1</b> Tactics</a></li>
+<li class="chapter" data-level="3.2" data-path="mitre-attck.html"><a href="mitre-attck.html#techniques"><i class="fa fa-check"></i><b>3.2</b> Techniques</a></li>
+<li class="chapter" data-level="3.3" data-path="mitre-attck.html"><a href="mitre-attck.html#procedures"><i class="fa fa-check"></i><b>3.3</b> Procedures</a></li>
+<li class="chapter" data-level="3.4" data-path="mitre-attck.html"><a href="mitre-attck.html#attck-for-ai-systems"><i class="fa fa-check"></i><b>3.4</b> ATT&amp;CK for AI systems</a></li>
+<li class="chapter" data-level="3.5" data-path="mitre-attck.html"><a href="mitre-attck.html#pros-and-cons"><i class="fa fa-check"></i><b>3.5</b> Pros and cons</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html"><i class="fa fa-check"></i><b>4</b> Open Worldwide Application Security Project (OWASP)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml012023-input-manipulation-attack"><i class="fa fa-check"></i><b>4.1</b> ML01:2023 Input Manipulation Attack</a></li>
+<li class="chapter" data-level="4.2" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml022023-data-poisoning-attack"><i class="fa fa-check"></i><b>4.2</b> ML02:2023 Data Poisoning Attack</a></li>
+<li class="chapter" data-level="4.3" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml032023-model-inversion-attack"><i class="fa fa-check"></i><b>4.3</b> ML03:2023 Model Inversion Attack</a></li>
+<li class="chapter" data-level="4.4" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml042023-membership-inference-attack"><i class="fa fa-check"></i><b>4.4</b> ML04:2023 Membership Inference Attack</a></li>
+<li class="chapter" data-level="4.5" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml052023-model-stealing"><i class="fa fa-check"></i><b>4.5</b> ML05:2023 Model Stealing</a></li>
+<li class="chapter" data-level="4.6" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml062023-ai-supply-chain-attacks"><i class="fa fa-check"></i><b>4.6</b> ML06:2023 AI Supply Chain Attacks</a></li>
+<li class="chapter" data-level="4.7" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml072023-troyan-horse-attack"><i class="fa fa-check"></i><b>4.7</b> ML07:2023 Troyan Horse Attack</a></li>
+<li class="chapter" data-level="4.8" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml082023-model-skewing"><i class="fa fa-check"></i><b>4.8</b> ML08:2023 Model Skewing</a></li>
+<li class="chapter" data-level="4.9" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml092023-output-integrity-attack"><i class="fa fa-check"></i><b>4.9</b> ML09:2023 Output Integrity Attack</a></li>
+<li class="chapter" data-level="4.10" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml102023-model-poisoning"><i class="fa fa-check"></i><b>4.10</b> ML10:2023 Model Poisoning</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html"><i class="fa fa-check"></i><b>5</b> NIST AI Risk Management Framework (AI RMF)</a></li>
+<li class="chapter" data-level="6" data-path="adversarial-robustness-toolbox-art.html"><a href="adversarial-robustness-toolbox-art.html"><i class="fa fa-check"></i><b>6</b> Adversarial Robustness Toolbox (ART)</a></li>
+<li class="chapter" data-level="7" data-path="dependable-and-explainable-learning-deel.html"><a href="dependable-and-explainable-learning-deel.html"><i class="fa fa-check"></i><b>7</b> DEpendable and Explainable Learning (DEEL)</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
@@ -148,9 +162,9 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="open-worldwide-application-security-project-owasp" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Open Worldwide Application Security Project (OWASP)<a href="open-worldwide-application-security-project-owasp.html#open-worldwide-application-security-project-owasp" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The Open Worldwide Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software <span class="citation"><a href="#ref-owasp">[6]</a></span>.</p>
+<div id="open-worldwide-application-security-project-owasp" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Open Worldwide Application Security Project (OWASP)<a href="open-worldwide-application-security-project-owasp.html#open-worldwide-application-security-project-owasp" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The Open Worldwide Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software <span class="citation"><a href="#ref-owasp">[15]</a></span>.</p>
 <p>One of OWASP’s best-known projects is the Top 10 - a list of the ten most significant vulnerabilities. This list is updated every two to three years due also to changing threats and attack opportunities.
 While classically OWASP was focused on software, new in recent months is the inclusion of specific vulnerabilities and challenges to AI systems.
 As a result we get two new lists of top 10 vulnerabilities. <a href="https://owasp.org/www-project-machine-learning-security-top-10/">OWASP Machine Learning Security Top Ten</a> focused on the security of ML systems and <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP Top 10 for Large Language Model Applications</a> focused on systems using large language models (LLMs).</p>
@@ -160,71 +174,71 @@ As a result we get two new lists of top 10 vulnerabilities. <a href="https://owa
 </div>
 <p>Below we briefly overview the Top 10 for Machine Learning Security.</p>
 <p><strong>Note</strong> <em>The list presented is still available as a draft version. Some positions are quite similar and perhaps the final Top 10 will be a little different. The following list is an abridged summary. The full version can be found at <a href="https://mltop10.info/" class="uri">https://mltop10.info/</a>.</em></p>
-<div id="ml012023-input-manipulation-attack" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> ML01:2023 Input Manipulation Attack<a href="open-worldwide-application-security-project-owasp.html#ml012023-input-manipulation-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml012023-input-manipulation-attack" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> ML01:2023 Input Manipulation Attack<a href="open-worldwide-application-security-project-owasp.html#ml012023-input-manipulation-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks involving data manipulation, including adversarial attacks. In this scenario the attacker deliberately changes the input data to alter the model’s decisions. For example, for a model that detects the presence of a person, the attack might involve developing a special stamp whose presence causes the person to go undetected.</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Adversarial training</em> One approach to defending against input manipulation attacks is to train the model on adversarial examples.</p>
 <p><em>Input validation</em> Checking input data for anomalies, such as unexpected values or patterns, and rejecting input data that may be malicious.</p>
 </div>
-<div id="ml022023-data-poisoning-attack" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> ML02:2023 Data Poisoning Attack<a href="open-worldwide-application-security-project-owasp.html#ml022023-data-poisoning-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml022023-data-poisoning-attack" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> ML02:2023 Data Poisoning Attack<a href="open-worldwide-application-security-project-owasp.html#ml022023-data-poisoning-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks involving data poisoning occur when an attacker manipulates training data to cause unwanted model behavior.</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Model validation</em> Validate the model using a separate validation set that was not used during training. This can help detect any data poisoning attacks that may have affected the training data.</p>
 <p><em>Anomaly detection</em> Using anomaly detection techniques to detect any unusual behavior on the network.</p>
 </div>
-<div id="ml032023-model-inversion-attack" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> ML03:2023 Model Inversion Attack<a href="open-worldwide-application-security-project-owasp.html#ml032023-model-inversion-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml032023-model-inversion-attack" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> ML03:2023 Model Inversion Attack<a href="open-worldwide-application-security-project-owasp.html#ml032023-model-inversion-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks involving model inversion occur when an attacker reverse-engineers a model to extract information from it, such as regarding the training set (checking if any observation was in the training data).</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Access control</em> Restricting access to the model or its predictions (authentication) can prevent attackers from obtaining the information needed to reverse engineer the model.</p>
 <p><em>Regular monitoring</em> Monitoring the model’s predictions for anomalies can help detect and prevent model inversion attacks (tracking the distribution of input and output data).</p>
 </div>
-<div id="ml042023-membership-inference-attack" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> ML04:2023 Membership Inference Attack<a href="open-worldwide-application-security-project-owasp.html#ml042023-membership-inference-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml042023-membership-inference-attack" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> ML04:2023 Membership Inference Attack<a href="open-worldwide-application-security-project-owasp.html#ml042023-membership-inference-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks involving membership inference occur when it analyzes model inferencing to see what data was in the training data, if specific observation was used in the training data.</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Model obfuscation</em> Obfuscating model predictions by adding random noise or using differential privacy techniques.</p>
 <p><em>Regularization</em>, such as L1 or L2 regularization, can help prevent over-fitting the model to the training data, which can reduce the model’s ability to accurately determine whether an example is included in the training data set.</p>
 </div>
-<div id="ml052023-model-stealing" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> ML05:2023 Model Stealing<a href="open-worldwide-application-security-project-owasp.html#ml052023-model-stealing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml052023-model-stealing" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> ML05:2023 Model Stealing<a href="open-worldwide-application-security-project-owasp.html#ml052023-model-stealing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks involving model stealing occur when an attacker gains access to model parameters and is able to accurately reproduce the model’s behavior on new data.</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Watermarking</em> Adding a watermark to model code and training data can make it possible to trace the source of the theft and hold the attacker accountable.</p>
 <p><em>Encryption</em> Encrypting model code, training data and other sensitive information can prevent attackers from accessing and stealing the model.</p>
 </div>
-<div id="ml062023-ai-supply-chain-attacks" class="section level2 hasAnchor" number="3.6">
-<h2><span class="header-section-number">3.6</span> ML06:2023 AI Supply Chain Attacks<a href="open-worldwide-application-security-project-owasp.html#ml062023-ai-supply-chain-attacks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml062023-ai-supply-chain-attacks" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> ML06:2023 AI Supply Chain Attacks<a href="open-worldwide-application-security-project-owasp.html#ml062023-ai-supply-chain-attacks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks involving a modified AI supply chain occur when an attacker modifies or replaces a library or machine learning model that is used by the system. This can also include data associated with machine learning models.</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Use package verification tools</em> Such as PEP 476 and Secure Package Install to verify the authenticity and integrity of packages before installing them.</p>
 <p><em>Use secure package repositories</em>, that enforce strict security measures and have a package verification process.</p>
 </div>
-<div id="ml072023-troyan-horse-attack" class="section level2 hasAnchor" number="3.7">
-<h2><span class="header-section-number">3.7</span> ML07:2023 Troyan Horse Attack<a href="open-worldwide-application-security-project-owasp.html#ml072023-troyan-horse-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml072023-troyan-horse-attack" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> ML07:2023 Troyan Horse Attack<a href="open-worldwide-application-security-project-owasp.html#ml072023-troyan-horse-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks involving transfer learning (aka Troyan horse attacks) occur when an attacker trains a model in one task and then tunes it in another task to cause it to behave in an undesirable way.</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Implement model isolation</em> can help prevent the transfer of malicious knowledge from one model to another.</p>
 <p><em>Using secure and trusted training datasets</em> can help prevent the transfer of malicious knowledge from the attacker model to the target model.</p>
 </div>
-<div id="ml082023-model-skewing" class="section level2 hasAnchor" number="3.8">
-<h2><span class="header-section-number">3.8</span> ML08:2023 Model Skewing<a href="open-worldwide-application-security-project-owasp.html#ml082023-model-skewing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml082023-model-skewing" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> ML08:2023 Model Skewing<a href="open-worldwide-application-security-project-owasp.html#ml082023-model-skewing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks involving model skewing occur when an attacker manipulates the distribution of new training data to cause the model to behave in undesirable ways.</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Verify the authenticity of feedback data</em> digital signatures and checksums may be useful to verify that the feedback data received by the system is authentic, and discard any data that does not match the expected format.</p>
 <p><em>Regularly monitor model performance</em> and compare its predictions with actual results to detect any deviations or distortions.</p>
 </div>
-<div id="ml092023-output-integrity-attack" class="section level2 hasAnchor" number="3.9">
-<h2><span class="header-section-number">3.9</span> ML09:2023 Output Integrity Attack<a href="open-worldwide-application-security-project-owasp.html#ml092023-output-integrity-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml092023-output-integrity-attack" class="section level2 hasAnchor" number="4.9">
+<h2><span class="header-section-number">4.9</span> ML09:2023 Output Integrity Attack<a href="open-worldwide-application-security-project-owasp.html#ml092023-output-integrity-attack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks on Output Integrity aim to modify or manipulate the output of a machine learning model in order to alter its behavior or cause harm to the system in which it is used.</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Secure communication channels</em> between the model and the interface responsible for displaying results should be secured using secure protocols such as SSL/TLS.</p>
 <p><em>Input validation</em> should be performed on the results to check for unexpected or manipulated values.</p>
 </div>
-<div id="ml102023-model-poisoning" class="section level2 hasAnchor" number="3.10">
-<h2><span class="header-section-number">3.10</span> ML10:2023 Model Poisoning<a href="open-worldwide-application-security-project-owasp.html#ml102023-model-poisoning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ml102023-model-poisoning" class="section level2 hasAnchor" number="4.10">
+<h2><span class="header-section-number">4.10</span> ML10:2023 Model Poisoning<a href="open-worldwide-application-security-project-owasp.html#ml102023-model-poisoning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Attacks involving model poisoning occurs when an attacker manipulates model parameters to cause undesirable behavior.</p>
 <p><strong>Example mitigation strategies</strong></p>
 <p><em>Regularization</em> Adding regularization techniques, such as L1 or L2 regularization, to the loss function helps prevent over-fitting and reduces the risk of model poisoning attacks.</p>
@@ -235,7 +249,7 @@ As a result we get two new lists of top 10 vulnerabilities. <a href="https://owa
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-owasp" class="csl-entry">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline">OWASP, <em><span>Open Worldwide Application Security Project</span></em>. OWASP, 2023. Available: <a href="https://owasp.org/">https://owasp.org/</a></div>
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">OWASP, <em><span>Open Worldwide Application Security Project</span></em>. OWASP, 2023. Available: <a href="https://owasp.org/">https://owasp.org/</a></div>
 </div>
 </div>
             </section>
@@ -247,14 +261,14 @@ As a result we get two new lists of top 10 vulnerabilities. <a href="https://owa
 <a href="nist-ai-risk-management-framework-ai-rmf.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({

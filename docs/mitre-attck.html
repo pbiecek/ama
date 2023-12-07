@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 MITRE ATT&amp;CK | Adversarial Model Analysis</title>
+  <title>Chapter 3 MITRE ATT&amp;CK | Adversarial Model Analysis</title>
   <meta name="description" content="Red Team Notes" />
   <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 MITRE ATT&amp;CK | Adversarial Model Analysis" />
+  <meta property="og:title" content="Chapter 3 MITRE ATT&amp;CK | Adversarial Model Analysis" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="Red Team Notes" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 MITRE ATT&amp;CK | Adversarial Model Analysis" />
+  <meta name="twitter:title" content="Chapter 3 MITRE ATT&amp;CK | Adversarial Model Analysis" />
   
   <meta name="twitter:description" content="Red Team Notes" />
   <meta name="twitter:image" content="/images/cover.png" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Przemysław Biecek" />
 
 
-<meta name="date" content="2023-11-22" />
+<meta name="date" content="2023-12-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,15 +32,15 @@
   
 <link rel="prev" href="model-evaluation-levels.html"/>
 <link rel="next" href="open-worldwide-application-security-project-owasp.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -49,9 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
 
 
 
@@ -102,31 +102,45 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="model-evaluation-levels.html"><a href="model-evaluation-levels.html"><i class="fa fa-check"></i><b>1</b> Model Evaluation Levels</a></li>
-<li class="chapter" data-level="2" data-path="mitre-attck.html"><a href="mitre-attck.html"><i class="fa fa-check"></i><b>2</b> MITRE ATT&amp;CK</a>
+<li class="chapter" data-level="1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html"><i class="fa fa-check"></i><b>1</b> The Two XAI Cultures</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="mitre-attck.html"><a href="mitre-attck.html#tactics"><i class="fa fa-check"></i><b>2.1</b> Tactics</a></li>
-<li class="chapter" data-level="2.2" data-path="mitre-attck.html"><a href="mitre-attck.html#techniques"><i class="fa fa-check"></i><b>2.2</b> Techniques</a></li>
-<li class="chapter" data-level="2.3" data-path="mitre-attck.html"><a href="mitre-attck.html#procedures"><i class="fa fa-check"></i><b>2.3</b> Procedures</a></li>
-<li class="chapter" data-level="2.4" data-path="mitre-attck.html"><a href="mitre-attck.html#attck-for-ai-systems"><i class="fa fa-check"></i><b>2.4</b> ATT&amp;CK for AI systems</a></li>
-<li class="chapter" data-level="2.5" data-path="mitre-attck.html"><a href="mitre-attck.html#pros-and-cons"><i class="fa fa-check"></i><b>2.5</b> Pros and cons</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html"><i class="fa fa-check"></i><b>3</b> Open Worldwide Application Security Project (OWASP)</a>
+<li class="chapter" data-level="1.1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml012023-input-manipulation-attack"><i class="fa fa-check"></i><b>3.1</b> ML01:2023 Input Manipulation Attack</a></li>
-<li class="chapter" data-level="3.2" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml022023-data-poisoning-attack"><i class="fa fa-check"></i><b>3.2</b> ML02:2023 Data Poisoning Attack</a></li>
-<li class="chapter" data-level="3.3" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml032023-model-inversion-attack"><i class="fa fa-check"></i><b>3.3</b> ML03:2023 Model Inversion Attack</a></li>
-<li class="chapter" data-level="3.4" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml042023-membership-inference-attack"><i class="fa fa-check"></i><b>3.4</b> ML04:2023 Membership Inference Attack</a></li>
-<li class="chapter" data-level="3.5" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml052023-model-stealing"><i class="fa fa-check"></i><b>3.5</b> ML05:2023 Model Stealing</a></li>
-<li class="chapter" data-level="3.6" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml062023-ai-supply-chain-attacks"><i class="fa fa-check"></i><b>3.6</b> ML06:2023 AI Supply Chain Attacks</a></li>
-<li class="chapter" data-level="3.7" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml072023-troyan-horse-attack"><i class="fa fa-check"></i><b>3.7</b> ML07:2023 Troyan Horse Attack</a></li>
-<li class="chapter" data-level="3.8" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml082023-model-skewing"><i class="fa fa-check"></i><b>3.8</b> ML08:2023 Model Skewing</a></li>
-<li class="chapter" data-level="3.9" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml092023-output-integrity-attack"><i class="fa fa-check"></i><b>3.9</b> ML09:2023 Output Integrity Attack</a></li>
-<li class="chapter" data-level="3.10" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml102023-model-poisoning"><i class="fa fa-check"></i><b>3.10</b> ML10:2023 Model Poisoning</a></li>
+<li class="chapter" data-level="1.1.1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#user-oriented-explanations"><i class="fa fa-check"></i><b>1.1.1</b> User Oriented Explanations</a></li>
+<li class="chapter" data-level="1.1.2" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#the-developer-oriented-explanations"><i class="fa fa-check"></i><b>1.1.2</b> The Developer Oriented Explanations</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html"><i class="fa fa-check"></i><b>4</b> NIST AI Risk Management Framework (AI RMF)</a></li>
-<li class="chapter" data-level="5" data-path="adversarial-robustness-toolbox-art.html"><a href="adversarial-robustness-toolbox-art.html"><i class="fa fa-check"></i><b>5</b> Adversarial Robustness Toolbox (ART)</a></li>
-<li class="chapter" data-level="6" data-path="dependable-and-explainable-learning-deel.html"><a href="dependable-and-explainable-learning-deel.html"><i class="fa fa-check"></i><b>6</b> DEpendable and Explainable Learning (DEEL)</a></li>
+<li class="chapter" data-level="1.2" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#challenges"><i class="fa fa-check"></i><b>1.2</b> Challenges</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#achilles-heels"><i class="fa fa-check"></i><b>1.2.1</b> Achilles’ heels</a></li>
+<li class="chapter" data-level="1.2.2" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#rashomon-perspectives"><i class="fa fa-check"></i><b>1.2.2</b> Rashomon perspectives</a></li>
+<li class="chapter" data-level="1.2.3" data-path="the-two-xai-cultures.html"><a href="the-two-xai-cultures.html#champion-challenger-analysis"><i class="fa fa-check"></i><b>1.2.3</b> Champion Challenger analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="model-evaluation-levels.html"><a href="model-evaluation-levels.html"><i class="fa fa-check"></i><b>2</b> Model Evaluation Levels</a></li>
+<li class="chapter" data-level="3" data-path="mitre-attck.html"><a href="mitre-attck.html"><i class="fa fa-check"></i><b>3</b> MITRE ATT&amp;CK</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="mitre-attck.html"><a href="mitre-attck.html#tactics"><i class="fa fa-check"></i><b>3.1</b> Tactics</a></li>
+<li class="chapter" data-level="3.2" data-path="mitre-attck.html"><a href="mitre-attck.html#techniques"><i class="fa fa-check"></i><b>3.2</b> Techniques</a></li>
+<li class="chapter" data-level="3.3" data-path="mitre-attck.html"><a href="mitre-attck.html#procedures"><i class="fa fa-check"></i><b>3.3</b> Procedures</a></li>
+<li class="chapter" data-level="3.4" data-path="mitre-attck.html"><a href="mitre-attck.html#attck-for-ai-systems"><i class="fa fa-check"></i><b>3.4</b> ATT&amp;CK for AI systems</a></li>
+<li class="chapter" data-level="3.5" data-path="mitre-attck.html"><a href="mitre-attck.html#pros-and-cons"><i class="fa fa-check"></i><b>3.5</b> Pros and cons</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html"><i class="fa fa-check"></i><b>4</b> Open Worldwide Application Security Project (OWASP)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml012023-input-manipulation-attack"><i class="fa fa-check"></i><b>4.1</b> ML01:2023 Input Manipulation Attack</a></li>
+<li class="chapter" data-level="4.2" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml022023-data-poisoning-attack"><i class="fa fa-check"></i><b>4.2</b> ML02:2023 Data Poisoning Attack</a></li>
+<li class="chapter" data-level="4.3" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml032023-model-inversion-attack"><i class="fa fa-check"></i><b>4.3</b> ML03:2023 Model Inversion Attack</a></li>
+<li class="chapter" data-level="4.4" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml042023-membership-inference-attack"><i class="fa fa-check"></i><b>4.4</b> ML04:2023 Membership Inference Attack</a></li>
+<li class="chapter" data-level="4.5" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml052023-model-stealing"><i class="fa fa-check"></i><b>4.5</b> ML05:2023 Model Stealing</a></li>
+<li class="chapter" data-level="4.6" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml062023-ai-supply-chain-attacks"><i class="fa fa-check"></i><b>4.6</b> ML06:2023 AI Supply Chain Attacks</a></li>
+<li class="chapter" data-level="4.7" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml072023-troyan-horse-attack"><i class="fa fa-check"></i><b>4.7</b> ML07:2023 Troyan Horse Attack</a></li>
+<li class="chapter" data-level="4.8" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml082023-model-skewing"><i class="fa fa-check"></i><b>4.8</b> ML08:2023 Model Skewing</a></li>
+<li class="chapter" data-level="4.9" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml092023-output-integrity-attack"><i class="fa fa-check"></i><b>4.9</b> ML09:2023 Output Integrity Attack</a></li>
+<li class="chapter" data-level="4.10" data-path="open-worldwide-application-security-project-owasp.html"><a href="open-worldwide-application-security-project-owasp.html#ml102023-model-poisoning"><i class="fa fa-check"></i><b>4.10</b> ML10:2023 Model Poisoning</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html"><i class="fa fa-check"></i><b>5</b> NIST AI Risk Management Framework (AI RMF)</a></li>
+<li class="chapter" data-level="6" data-path="adversarial-robustness-toolbox-art.html"><a href="adversarial-robustness-toolbox-art.html"><i class="fa fa-check"></i><b>6</b> Adversarial Robustness Toolbox (ART)</a></li>
+<li class="chapter" data-level="7" data-path="dependable-and-explainable-learning-deel.html"><a href="dependable-and-explainable-learning-deel.html"><i class="fa fa-check"></i><b>7</b> DEpendable and Explainable Learning (DEEL)</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
@@ -148,18 +162,18 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="mitre-attck" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> MITRE ATT&amp;CK<a href="mitre-attck.html#mitre-attck" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="mitre-attck" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> MITRE ATT&amp;CK<a href="mitre-attck.html#mitre-attck" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Inspirations for adversarial analysis of ML models can be borrowed from concepts proposed in cyber security. One such remarkable concept is the ATT&amp;CK matrix maintained by MITRE corporations.</p>
 <p>MITRE was formed in 1958 as a military think tank to advance national security. Now it is ,,applying systems thinking to national challenges in defense, cybersecurity, healthcare, homeland security, and transportation. Solving problems for a safer world’’ (a quote from their official profile). MITRE has a number of ambitious projects underway, perhaps the best known of which is the MITRE ATT&amp;CK framework <a href="https://attack.mitre.org/" class="uri">https://attack.mitre.org/</a>.</p>
-<p>The ATT&amp;CK framework <span class="citation"><a href="#ref-mitre-att">[6]</a></span> is a curated publicly available knowledge base of various cyber adversary tactics and techniques that can be used across the entire attack lifecycle. It takes the perspective of the adversary collecting and cataloging the various tactics, techniques, and procedures (TTPs) used in cyber intrusions, thereby offering defenders a detailed insight into potential attack methods and aiding in the development of more robust defense strategies.</p>
+<p>The ATT&amp;CK framework <span class="citation"><a href="#ref-mitre-att">[12]</a></span> is a curated publicly available knowledge base of various cyber adversary tactics and techniques that can be used across the entire attack lifecycle. It takes the perspective of the adversary collecting and cataloging the various tactics, techniques, and procedures (TTPs) used in cyber intrusions, thereby offering defenders a detailed insight into potential attack methods and aiding in the development of more robust defense strategies.</p>
 <div class="float" id="fig:mitre">
 <img src="images/mitre_attack.png" alt="ATT&amp;CK Matrix for Enterprise, screenshot from https://attack.mitre.org/" />
 <div class="figcaption">ATT&amp;CK Matrix for Enterprise, screenshot from <a href="https://attack.mitre.org/" class="uri">https://attack.mitre.org/</a></div>
 </div>
 <p>First, let’s familiarise with the nomenclature used in ATT&amp;CK framework (Adversarial Tactics, Techniques, and Common Knowledge).</p>
-<div id="tactics" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Tactics<a href="mitre-attck.html#tactics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="tactics" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Tactics<a href="mitre-attck.html#tactics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A <strong>tactic</strong> refers to a high-level objective or goal that an adversary aims to achieve during a cyber attack. It represents the overarching category of activities or actions employed by attackers to accomplish their malicious objectives within a network or system.</p>
 <p>There are 12 tactics defined within the ATT&amp;CK framework, each representing a distinct phase or goal in the cyber attack lifecycle (these are columns in the matrix presented in Figure <span class="citation"><a href="#ref-fig:mitre"><strong>fig:mitre?</strong></a></span>):</p>
 <ul>
@@ -176,27 +190,27 @@ div.csl-indent {
 <li><strong>Impact:</strong> Tactics focused on actions that cause damage, disruption, or other negative effects on the target system or organization.</li>
 </ul>
 </div>
-<div id="techniques" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Techniques<a href="mitre-attck.html#techniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="techniques" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Techniques<a href="mitre-attck.html#techniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>While <strong>tactique</strong> address the question <em>Why</em> is the objective of the adversary action, the <em>What</em> question is addressed by <strong>techniques</strong>. More formally a technique refers to a specific method, approach, or procedure used by adversaries to accomplish a particular objective within a given tactic during a cyber attack.</p>
 <p>There is a (growing) number of techniques for each tactic. For example, the techniques listed under the “Collection” tactic represent specific methods or procedures used by attackers to gather or harvest data from targeted systems or networks during a cyber intrusion. These techniques help adversaries achieve their goal of acquiring sensitive information or valuable data from compromised environments. Some techniques listed for the tactic “Collection” include Audio Capture, Clipboard data, Screen Capture and Email collection.</p>
 <p>For each technique, the ATT&amp;CK matrix provides examples of procedures, mitigation strategies and detection techniques. See page <a href="https://attack.mitre.org/techniques/T1123/" class="uri">https://attack.mitre.org/techniques/T1123/</a> for an description for the Audio Capture technique.</p>
 </div>
-<div id="procedures" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Procedures<a href="mitre-attck.html#procedures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="procedures" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Procedures<a href="mitre-attck.html#procedures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>While <strong>tactiques</strong> address the question <em>Why</em>, <strong>techniques</strong> address the question <em>What</em> then <strong>procedures</strong> are examples of <em>How</em>.
 Procedures are descriptions of the steps necessary to implement the technique to perform the technique.</p>
 </div>
-<div id="attck-for-ai-systems" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> ATT&amp;CK for AI systems<a href="mitre-attck.html#attck-for-ai-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The ATT&amp;CK matrix was developed for attacks on IT infrastructure and applies to cyber security in the classical sense. However, due to its popularity, work is underway to adapt this approach to security analysis of AI systems. An example of the solution being developed by MITRE is the ATLAS matrix <span class="citation"><a href="#ref-atlas-att">[7]</a></span>, <span class="citation"><a href="#ref-atlas-att2">[8]</a></span>.</p>
+<div id="attck-for-ai-systems" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> ATT&amp;CK for AI systems<a href="mitre-attck.html#attck-for-ai-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The ATT&amp;CK matrix was developed for attacks on IT infrastructure and applies to cyber security in the classical sense. However, due to its popularity, work is underway to adapt this approach to security analysis of AI systems. An example of the solution being developed by MITRE is the ATLAS matrix <span class="citation"><a href="#ref-atlas-att">[13]</a></span>, <span class="citation"><a href="#ref-atlas-att2">[14]</a></span>.</p>
 <div class="float" id="fig:mitreatlas">
 <img src="images/mitre_atlas.png" alt="ATLAS - Adversarial Threat Landscape for Artificial-Intelligence Systems" />
 <div class="figcaption">ATLAS - Adversarial Threat Landscape for Artificial-Intelligence Systems</div>
 </div>
 </div>
-<div id="pros-and-cons" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Pros and cons<a href="mitre-attck.html#pros-and-cons" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="pros-and-cons" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Pros and cons<a href="mitre-attck.html#pros-and-cons" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The ATT&amp;CK matrix was designed for AI systems. It can be useful as a reference for machine learning-based systems, but it’s a risky interpolation. From the perspective of AI systems, the ATT&amp;CK matrix offers some unique pros and a new perspective, but it also has some drawbacks or shortcomings. Here is a subjective selection of one and the other.</p>
 <p>The undoubted advantage is the attacker’s perspective. The matrix resembles an hacker playbook, but at the same time allows the security team to check if some security problems are missed or not.</p>
 <p>Second advantage is the standardized language, the framework provides a standardized terminology and taxonomy for cybersecurity professionals, allowing them to communicate more effectively about threats, tactics, and techniques used by adversaries.</p>
@@ -212,13 +226,13 @@ The core element of this framework is a list of 12 tactics that describe success
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-mitre-att" class="csl-entry">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline">MITRE, <em><span class="nocase">Adversarial Tactics, Techniques, and Common Knowledge (ATT&amp;CK) Matrix</span></em>. MITRE, 2023. Available: <a href="https://attack.mitre.org/">https://attack.mitre.org/</a></div>
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">MITRE, <em><span class="nocase">Adversarial Tactics, Techniques, and Common Knowledge (ATT&amp;CK) Matrix</span></em>. MITRE, 2023. Available: <a href="https://attack.mitre.org/">https://attack.mitre.org/</a></div>
 </div>
 <div id="ref-atlas-att" class="csl-entry">
-<div class="csl-left-margin">[7] </div><div class="csl-right-inline">MITRE, <em><span class="nocase">Adversarial Threat Landscape for Artificial-Intelligence Systems (ATLAS) Matrix</span></em>. MITRE, 2023. Available: <a href="https://atlas.mitre.org/matrices/ATLAS">https://atlas.mitre.org/matrices/ATLAS</a></div>
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">MITRE, <em><span class="nocase">Adversarial Threat Landscape for Artificial-Intelligence Systems (ATLAS) Matrix</span></em>. MITRE, 2023. Available: <a href="https://atlas.mitre.org/matrices/ATLAS">https://atlas.mitre.org/matrices/ATLAS</a></div>
 </div>
 <div id="ref-atlas-att2" class="csl-entry">
-<div class="csl-left-margin">[8] </div><div class="csl-right-inline">MITRE, <em><span>Adversarial ML Threat Matrix</span></em>. MITRE, 2023. Available: <a href="https://github.com/mitre/advmlthreatmatrix">https://github.com/mitre/advmlthreatmatrix</a></div>
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">MITRE, <em><span>Adversarial ML Threat Matrix</span></em>. MITRE, 2023. Available: <a href="https://github.com/mitre/advmlthreatmatrix">https://github.com/mitre/advmlthreatmatrix</a></div>
 </div>
 </div>
             </section>
@@ -230,14 +244,14 @@ The core element of this framework is a list of 12 tactics that describe success
 <a href="open-worldwide-application-security-project-owasp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
