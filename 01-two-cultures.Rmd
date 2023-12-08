@@ -7,6 +7,18 @@ In this chapter, I argue that the field of explainable artificial intelligence (
 
 In the second part of this chapter, three key challenges facing one culture are presented and illustrated using a real dataset as an example.
 
+## Motivation
+
+I was working recently on tumor detection models from xray images of CT studies. The interesting experience from this project is, that once you identify a tumor, radiologist is not really looking into the explanations. The see the tumor themself and dont need another obscure mask to shadow the tumor. The real interest in explainability for the model come from model developers, that strive to understand if the model is safe from artifacts or how they can improve the model.
+
+Same in true for many computer vision models. See the figure below. Once you have prediction `cat` no user will ask you why it's that prediction. If the prediction is wrong the user will not care about reasons of the mistake as well. 
+
+In such cases the largest interest in explanations come from model developer. It's the developer or model auditor, who want to check if right regions and right features are used by the model.
+
+This observation motivate the rest of this chapter. If we focus model on needs of model developers and model auditors, then our explanations will be used and their evaluation will be much easier.
+
+![If the model prediction is cat, who will need an explanation?](images/drops.jpg)
+
 ## Introduction
 
 Machine learning starts with models.
