@@ -80,6 +80,8 @@ Risk management is an ongoing process that requires taking into account differen
 
 ### Cartegories
 
+Cartegories, subcartegories, outcomes and actions are listed in [@rmf_nist_2023]
+https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=29.65
 
 ![Main categories for each of the four NIST functions to help organizations address the risks of AI systems in practice.](images/nist_categories.png)
 
