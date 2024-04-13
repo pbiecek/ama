@@ -28,3 +28,16 @@ nist-ai-risk-management-framework-ai-rmf
 adversarial-robustness-toolbox-art
 dependable-and-explainable-learning-deel
 motivation
+risks
+characteristics-of-trustworthy-ai-systems
+valid-and-reliable
+safe
+accountable-and-transparent
+explainable-and-interpretable
+privacy-enhanced
+fair-with-harmful-bias-managed
+failure-mode-and-effects-analysis-fmea
+iso-27005
+ai-rmf-core
+functions
+cartegories

@@ -1,5 +1,9 @@
 # The Two XAI Cultures
 
+
+*you can use an aircraft without understanding why it flies, but you want someone to understand why it flies*
+
+
 In 2001, Leo Breiman published a phenomenal paper "The Two Cultures" [@breiman2001statistical], in which he diagnosed the growing gap between the mainstream trends in academic research conducted by statisticians against new challenges, such as the curse of dimensionality, the construction of effective predictive algorithms.
  His paper is so well constructed that its narrative structure can be applied to diagnose problems in many research areas standing on the edge of an identity crisis.
 

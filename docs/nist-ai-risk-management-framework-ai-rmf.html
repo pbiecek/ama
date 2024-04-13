@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Adversarial Model Analysis</title>
+  <title>Chapter 5 NIST AI Risk Management Framework (AI RMF) | Adversarial Model Analysis</title>
   <meta name="description" content="Red Team Notes" />
   <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Adversarial Model Analysis" />
+  <meta property="og:title" content="Chapter 5 NIST AI Risk Management Framework (AI RMF) | Adversarial Model Analysis" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="Red Team Notes" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Adversarial Model Analysis" />
+  <meta name="twitter:title" content="Chapter 5 NIST AI Risk Management Framework (AI RMF) | Adversarial Model Analysis" />
   
   <meta name="twitter:description" content="Red Team Notes" />
   <meta name="twitter:image" content="/images/cover.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="open-worldwide-application-security-project-owasp.html"/>
+<link rel="next" href="adversarial-robustness-toolbox-art.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -182,19 +182,99 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="nist-ai-risk-management-framework-ai-rmf" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> NIST AI Risk Management Framework (AI RMF)<a href="nist-ai-risk-management-framework-ai-rmf.html#nist-ai-risk-management-framework-ai-rmf" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><a href="https://nist.gov/">The National Institute of Standards and Technology (NIST)</a> was founded in 1901 and is now part of the U.S. Department of Commerce. NIST mission is to promote U.S. innovation and industrial competitiveness by advancing measurement science, standards, and technology in ways that enhance economic security and improve our quality of life.</p>
+<p>In collaboration with the private and public sectors, NIST has developed a framework to better manage risks to individuals, organizations, and society associated with artificial intelligence (AI). The NIST AI Risk Management Framework (AI RMF)
+it is designed for voluntary adoption, aiming to enhance trustworthiness of AI solutions. First version of this framework was released on January 26, 2023. Two months later, on March 30, NIST launched the <a href="https://airc.nist.gov/Home">Trustworthy and Responsible AI Resource Center</a>, which will facilitate implementation of, and international alignment with, the AI RMF.</p>
+<p>A key starting point for the NIST RMF <span class="citation"><a href="#ref-rmf_nist_2023">[6]</a></span> is the observation that the risks associated with systems using ML and AI components are different from those for classical IT systems. Examples of these differences are numerous, such as the adaptive nature of ML modules that adjust to training data that may change over time, the black box nature of many ML/AI systems, the multiplicity of applications for ML/AI modules that may have been trained on non-representative data. For this reason, although there are many other tools for managing risks in AI systems, a new standard for managing risks in AI-based systems is needed.</p>
+<div id="risks" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Risks<a href="nist-ai-risk-management-framework-ai-rmf.html#risks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the context of the AI RMF, risk refers to <em>the composite measure of an event’s probability of occurring and the magnitude or degree of the consequences of the corresponding event</em>.</p>
+<p>AI risk management offers a path to minimize potential negative impacts of AI systems,
+such as threats to civil liberties and rights, while also providing opportunities to maximize positive impacts. Addressing, documenting, and managing AI risks and potential negative impacts effectively can lead to more trustworthy AI systems.</p>
+<div class="float">
+<img src="images/nist_harms.png" alt="Potential harms related to AI systems. It is Figure 1 in NIST RMF" />
+<div class="figcaption">Potential harms related to AI systems. It is Figure 1 in NIST RMF</div>
+</div>
+</div>
+<div id="characteristics-of-trustworthy-ai-systems" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Characteristics of trustworthy AI systems<a href="nist-ai-risk-management-framework-ai-rmf.html#characteristics-of-trustworthy-ai-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A comprehensive approach to risk management calls for balancing tradeoffs
+among the trustworthiness characteristics.</p>
+<div class="float">
+<img src="images/nist_characteristics.png" alt="Characteristics of trustworthy AI systems. It is Figure 4 in NIST RMF" />
+<div class="figcaption">Characteristics of trustworthy AI systems. It is Figure 4 in NIST RMF</div>
+</div>
+<div id="valid-and-reliable" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Valid and Reliable<a href="nist-ai-risk-management-framework-ai-rmf.html#valid-and-reliable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Validation</strong> is the “confirmation, through the provision of objective evidence, that the requirements for a specific intended use or application have been fulfilled” (ISO
+9000:2015)</p>
+<p><strong>Reliability</strong> is defined in the same standard as the “ability of an item to perform as required, without failure, for a given time interval, under given conditions” (ISO/IEC TS
+5723:2022).</p>
+<p><strong>Accuracy</strong> is the “closeness of results of observations, computations, or estimates to the true values or the values accepted as being true.” (ISO/IEC TS 5723:2022)</p>
+<p><strong>Robustness or generalizability</strong> is defined as the “ability of a system to maintain its level of performance under a variety of circumstances” (ISO/IEC TS 5723:2022)</p>
+</div>
+<div id="safe" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Safe<a href="nist-ai-risk-management-framework-ai-rmf.html#safe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Safe</strong> AI systems should “not under defined conditions, lead to a state in which human life, health, property, or the environment is endangered” (ISO/IEC TS 5723:2022).</p>
+<p><strong>Resilient</strong> system can withstand unexpected adverse events or unexpected changes in their environment or use – or if they can maintain their functions and structure in the face of internal and external change and degrade safely and gracefully when this is necessary (ISO/IEC TS 5723:2022).</p>
+<p><strong>Secure</strong> AI system can maintain confidentiality, integrity, and availability through protection mechanisms that prevent unauthorized access and us.</p>
+</div>
+<div id="accountable-and-transparent" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Accountable and Transparent<a href="nist-ai-risk-management-framework-ai-rmf.html#accountable-and-transparent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Transparency</strong> reflects the extent to which information about an AI system and its outputs is available to individuals interacting with such a system – regardless of whether they are even aware that they are doing so.</p>
+<p><strong>Accountability</strong> presupposes transparency.</p>
+</div>
+<div id="explainable-and-interpretable" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Explainable and Interpretable<a href="nist-ai-risk-management-framework-ai-rmf.html#explainable-and-interpretable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Explainability</strong> refers to a representation of the mechanisms underlying AI systems’ operation, whereas <strong>interpretability</strong> refers to the meaning of AI systems’ output in the context of their designed functional purposes.</p>
+<p>Transparency, explainability, and interpretability are distinct characteristics that support each other. <strong>Transparency</strong> can answer the question of “what happened” in the system. <strong>Explainability</strong> can answer the question of “how” a decision was made in the system. <strong>Interpretability</strong> can answer the question of “why” a decision was made by the system and its meaning or context to the user.</p>
+</div>
+<div id="privacy-enhanced" class="section level3 hasAnchor" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Privacy-Enhanced<a href="nist-ai-risk-management-framework-ai-rmf.html#privacy-enhanced" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Privacy</strong> refers to the norms and practices that help to safeguard human autonomy, identity, and dignity. These norms and practices typically address freedom from intrusion, limiting observation, or individuals’ agency to consent to disclosure or control of facets of their identities (e.g., body, data, reputation).</p>
+</div>
+<div id="fair-with-harmful-bias-managed" class="section level3 hasAnchor" number="5.2.6">
+<h3><span class="header-section-number">5.2.6</span> Fair – with Harmful Bias Managed<a href="nist-ai-risk-management-framework-ai-rmf.html#fair-with-harmful-bias-managed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Fairness</strong> in AI includes concerns for equality and equity by addressing issues such as harmful bias and discrimination. Standards of fairness can be complex and difficult to define because perceptions of fairness differ among cultures and may shift depending on application.</p>
+<p><strong>Bias</strong> is broader than demographic balance and data representativeness. NIST has identified three major categories of AI bias to be considered and managed: systemic, computational and statistical, and human-cognitive.</p>
+</div>
+</div>
+<div id="ai-rmf-core" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> AI RMF Core<a href="nist-ai-risk-management-framework-ai-rmf.html#ai-rmf-core" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="functions" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Functions<a href="nist-ai-risk-management-framework-ai-rmf.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The actions that can be taken in risk management are grouped into categories and subcategories. These in turn are grouped into four overarching functions in risk management, these are Govern, Map, Measure and Manage.</p>
+<p>Risk management is an ongoing process that requires taking into account different perspectives. These four functions correspond to the main perspectives that need to be considered throughout the life cycle of an AI system.</p>
+<div class="float">
+<img src="images/nist_functions.png" alt="The four main functions defined by the NIST framework related to AI-risks." />
+<div class="figcaption">The four main functions defined by the NIST framework related to AI-risks.</div>
+</div>
+</div>
+<div id="cartegories" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Cartegories<a href="nist-ai-risk-management-framework-ai-rmf.html#cartegories" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="float">
+<img src="images/nist_categories.png" alt="Main categories for each of the four NIST functions to help organizations address the risks of AI systems in practice." />
+<div class="figcaption">Main categories for each of the four NIST functions to help organizations address the risks of AI systems in practice.</div>
+</div>
+
+</div>
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body">
+<div id="ref-rmf_nist_2023" class="csl-entry">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">NIST, <span>“<span>Artificial Intelligence Risk Management Framework (AI RMF)</span>.”</span> NIST, 2023. Accessed: Jan. 2023. [Online]. Available: <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf">https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf</a></div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="open-worldwide-application-security-project-owasp.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="adversarial-robustness-toolbox-art.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -225,7 +305,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/pbiecek/ama/edit/master/%s",
+"link": "https://github.com/pbiecek/ama/edit/master/30-nist.Rmd",
 "text": "Edit"
 },
 "history": {
