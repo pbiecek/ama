@@ -23,7 +23,7 @@
 <meta name="author" content="Przemysław Biecek" />
 
 
-<meta name="date" content="2024-04-13" />
+<meta name="date" content="2024-05-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,6 +156,8 @@ div.csl-indent {
 <li class="chapter" data-level="5.3.1" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html#functions"><i class="fa fa-check"></i><b>5.3.1</b> Functions</a></li>
 <li class="chapter" data-level="5.3.2" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html#cartegories"><i class="fa fa-check"></i><b>5.3.2</b> Cartegories</a></li>
 </ul></li>
+<li class="chapter" data-level="5.4" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html#adversarial-machine-learning"><i class="fa fa-check"></i><b>5.4</b> Adversarial Machine Learning</a></li>
+<li class="chapter" data-level="5.5" data-path="nist-ai-risk-management-framework-ai-rmf.html"><a href="nist-ai-risk-management-framework-ai-rmf.html#other-relevant-nist-initiatives"><i class="fa fa-check"></i><b>5.5</b> Other relevant NIST initiatives</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="adversarial-robustness-toolbox-art.html"><a href="adversarial-robustness-toolbox-art.html"><i class="fa fa-check"></i><b>6</b> Adversarial Robustness Toolbox (ART)</a></li>
 <li class="chapter" data-level="7" data-path="dependable-and-explainable-learning-deel.html"><a href="dependable-and-explainable-learning-deel.html"><i class="fa fa-check"></i><b>7</b> DEpendable and Explainable Learning (DEEL)</a></li>
@@ -260,14 +262,40 @@ among the trustworthiness characteristics.</p>
 <img src="images/nist_categories.png" alt="Main categories for each of the four NIST functions to help organizations address the risks of AI systems in practice." />
 <div class="figcaption">Main categories for each of the four NIST functions to help organizations address the risks of AI systems in practice.</div>
 </div>
-
 </div>
+</div>
+<div id="adversarial-machine-learning" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Adversarial Machine Learning<a href="nist-ai-risk-management-framework-ai-rmf.html#adversarial-machine-learning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A good companion to the RMF Framework is another NIST document ,,Adversarial Machine Learning. A Taxonomy and Terminology of Attacks and Mitigations’’ <span class="citation"><a href="#ref-vassilev_adversarial_2024">[7]</a></span>.
+It presents an up-to-date map of available attacks on predictive models with a particular focus (unlike OWASP and MITTRE) on the model perspective. The standard includes detailed explanations of each type of attack with examples. A concise summary of the attacks discussed is provided in the figure below.</p>
+<div class="float">
+<img src="images/NIST_attacks.png" alt="Reconstruction of Figure 1 from the ,,Taxonomy of attacks on Predictive AI systems’’ [7]" />
+<div class="figcaption">Reconstruction of Figure 1 from the ,,Taxonomy of attacks on Predictive AI systems’’ <span class="citation"><a href="#ref-vassilev_adversarial_2024">[7]</a></span></div>
+</div>
+</div>
+<div id="other-relevant-nist-initiatives" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Other relevant NIST initiatives<a href="nist-ai-risk-management-framework-ai-rmf.html#other-relevant-nist-initiatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>NIST has also produced a number of other documents and standards of interest from a model analysis perspective.</p>
+<ul>
+<li>Reducing Risks Posed by Synthetic Content. An Overview of Technical Approaches to Digital Content Transparency. <span class="citation"><a href="#ref-nist-synthetic-content">[8]</a></span>. a broad discussion of systems for generative AI and, in particular, techniques for detecting the provenance of text, image, audio and video content.</li>
+</ul>
+<div class="float">
+<img src="images/NIST_IR_8269.png" alt="Figure 2 from draft of [8]" />
+<div class="figcaption">Figure 2 from draft of <span class="citation"><a href="#ref-nist-synthetic-content">[8]</a></span></div>
+</div>
+
 </div>
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-rmf_nist_2023" class="csl-entry">
 <div class="csl-left-margin">[6] </div><div class="csl-right-inline">NIST, <span>“<span>Artificial Intelligence Risk Management Framework (AI RMF)</span>.”</span> NIST, 2023. Accessed: Jan. 2023. [Online]. Available: <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf">https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf</a></div>
+</div>
+<div id="ref-vassilev_adversarial_2024" class="csl-entry">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">A. Vassilev, A. Oprea, A. Fordyce, and H. Anderson, <span>“Adversarial machine learning: A taxonomy and terminology of attacks and mitigations,”</span> National Institute of Standards; Technology (U.S.), Gaithersburg, MD, NIST 100-2e2023, 2024. doi: <a href="https://doi.org/10.6028/NIST.AI.100-2e2023">10.6028/NIST.AI.100-2e2023</a>.</div>
+</div>
+<div id="ref-nist-synthetic-content" class="csl-entry">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">NIST, <em><span class="nocase">Reducing Risks Posed by Synthetic Content. An Overview of Technical Approaches to Digital Content Transparency</span></em>. NIST, 2024. Available: <a href="https://airc.nist.gov/docs/NIST.AI.100-4.SyntheticContent.ipd.pdf">https://airc.nist.gov/docs/NIST.AI.100-4.SyntheticContent.ipd.pdf</a></div>
 </div>
 </div>
             </section>

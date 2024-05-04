@@ -41,3 +41,5 @@ iso-27005
 ai-rmf-core
 functions
 cartegories
+adversarial-machine-learning
+other-relevant-nist-initiatives
