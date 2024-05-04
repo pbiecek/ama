@@ -86,3 +86,9 @@ https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=29.65
 ![Main categories for each of the four NIST functions to help organizations address the risks of AI systems in practice.](images/nist_categories.png)
 
 
+## Other relevant NIST initiatives
+
+NIST has also produced a number of other documents and standards of interest from a model analysis perspective. 
+
+* Reducing Risks Posed by Synthetic Content. An Overview of Technical Approaches to Digital Content Transparency. [@nist-synthetic-content]. a broad discussion of systems for generative AI and, in particular, techniques for detecting the provenance of text, image, audio and video content.
+

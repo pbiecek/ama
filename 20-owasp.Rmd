@@ -5,7 +5,8 @@ The Open Worldwide Application Security Project (OWASP) is a nonprofit foundatio
 
 One of OWASP's best-known projects is the Top 10 - a list of the ten most significant vulnerabilities. This list is updated every two to three years due also to changing threats and attack opportunities.
 While classically OWASP was focused on software, new in recent months is the inclusion of specific vulnerabilities and challenges to AI systems.
-As a result we get two new lists of top 10 vulnerabilities. [OWASP Machine Learning Security Top Ten](https://owasp.org/www-project-machine-learning-security-top-10/) focused on the security of ML systems and [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) focused on systems using large language models (LLMs).
+As a result we get two new lists of top 10 vulnerabilities. [OWASP Machine Learning Security Top Ten](https://owasp.org/www-project-machine-learning-security-top-10/) focused on the security of ML systems and [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) [@owasp-llm-top10] focused on systems using large language models (LLMs).
+In April 2024 this list got extended with [LLM AI Cybersecurity & Governance Checklist](https://owasp.org/www-project-top-10-for-large-language-model-applications/llm-top-10-governance-doc/LLM_AI_Security_and_Governance_Checklist-v1.1.pdf) [@owasp-llm-checklist].
 
 ![Top 10 OWASP ML Sec](images/owasp.png)
 
