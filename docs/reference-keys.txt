@@ -43,3 +43,5 @@ functions
 cartegories
 adversarial-machine-learning
 other-relevant-nist-initiatives
+ai-security-framework
+snowflake-ai-security-framework
